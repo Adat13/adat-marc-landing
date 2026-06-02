@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
+import profilePic from '../../167634689.jpeg';
 import { 
   User, Code, Cpu, BookOpen, ChevronRight, Calendar, Award, 
   Terminal, Globe, Layers, ArrowLeft, ExternalLink, Sparkles, GitBranch,
@@ -51,7 +52,8 @@ const weeksData = [
     videoId: "pQN-pnXPaVg",
     resources: [
       { name: "MDN Web Docs - HTML", url: "https://developer.mozilla.org/es/docs/Web/HTML" },
-      { name: "Guía de SEO para principiantes", url: "https://developers.google.com/search/docs/fundamentals/seo-starter-guide" }
+      { name: "Guía de SEO para principiantes", url: "https://developers.google.com/search/docs/fundamentals/seo-starter-guide" },
+      { name: "Proyecto Semanal: Pastelería Dulzemi", url: "https://github.com/Adat13/Dulzemi" }
     ]
   },
   {
@@ -74,7 +76,8 @@ const weeksData = [
     videoId: "yfoY53QXEnI",
     resources: [
       { name: "A Complete Guide to Flexbox", url: "https://css-tricks.com/snippets/css/a-guide-to-flexbox/" },
-      { name: "A Complete Guide to Grid", url: "https://css-tricks.com/snippets/css/complete-guide-grid/" }
+      { name: "A Complete Guide to Grid", url: "https://css-tricks.com/snippets/css/complete-guide-grid/" },
+      { name: "Proyecto Semanal: Alfa Green", url: "https://github.com/Adat13/alfa-green" }
     ]
   },
   {
@@ -97,7 +100,8 @@ const weeksData = [
     videoId: "W6NZfCO5SIk",
     resources: [
       { name: "JavaScript Info Tutorial", url: "https://javascript.info/" },
-      { name: "MDN DOM Manipulation", url: "https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Client-side_web_APIs/Manipulating_documents" }
+      { name: "MDN DOM Manipulation", url: "https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Client-side_web_APIs/Manipulating_documents" },
+      { name: "Proyecto Semanal: Uso de Canvas Web FIS", url: "https://github.com/Adat13/DESARROLLO-WEB-FIS" }
     ]
   },
   {
@@ -105,7 +109,7 @@ const weeksData = [
     title: "Semana 5: Introducción a React & Componentes",
     period: "Ecosistema de Componentes SPA",
     summary: "Migración de páginas estáticas al framework React para una arquitectura modular, reutilizable y eficiente con Renderización Dinámica.",
-    extendedDescription: "El gran salto hacia el desarrollo frontend moderno. Adoptamos React para convertir nuestro proyecto en una Single Page Application (SPA). Desglosamos la interfaz en componentes reutilizables, aprendimos la sintaxis JSX, y gestionamos el estado de la aplicación utilizando Hooks como `useState` y `useEffect`. El flujo de datos unidireccional (Props) cambió por completo nuestra forma de pensar.",
+    extendedDescription: "El gran salto hacia el desarrollo frontend moderno. Adoptamos React para convertir nuestro proyecto en una Single Page Application (SPA). Desglosamos la interfaz en componentes reutilizables, aprendimos la sintaxis JSX, y gestionamos el estado de la aplicación utilizando Hooks como \`useState\` y \`useEffect\`. El flujo de datos unidireccional (Props) cambió por completo nuestra forma de pensar.",
     achievements: [
       "Creación de componentes funcionales e interactivos en React con JSX.",
       "Uso de React Hooks fundamentales (useState, useEffect) para lógica de estado.",
@@ -120,7 +124,8 @@ const weeksData = [
     videoId: "bMknfKXIFA8",
     resources: [
       { name: "React Official Docs", url: "https://react.dev/" },
-      { name: "Vite JS Guide", url: "https://vitejs.dev/guide/" }
+      { name: "Vite JS Guide", url: "https://vitejs.dev/guide/" },
+      { name: "Proyecto Semanal: Dashboard Chifa Richi", url: "https://github.com/Adat13/chifa-richi" }
     ]
   },
   {
@@ -128,7 +133,7 @@ const weeksData = [
     title: "Semana 6: Animaciones Fluidas con Framer Motion",
     period: "Micro-interacciones y UI Animada",
     summary: "Estudio e implementación de animaciones avanzadas para mejorar la experiencia de usuario y dar vida a los componentes mediante físicas de resorte.",
-    extendedDescription: "Una buena UI debe sentirse viva y responder al usuario de forma orgánica. Con la introducción de `framer-motion`, llevamos nuestras animaciones al siguiente nivel. Reemplazamos transiciones CSS rígidas por animaciones basadas en físicas de resortes (spring physics). Implementamos animaciones condicionadas al scroll (`whileInView`), efectos hover, y controlamos el montaje/desmontaje de componentes usando `AnimatePresence`.",
+    extendedDescription: "Una buena UI debe sentirse viva y responder al usuario de forma orgánica. Con la introducción de \`framer-motion\`, llevamos nuestras animaciones al siguiente nivel. Reemplazamos transiciones CSS rígidas por animaciones basadas en físicas de resortes (spring physics). Implementamos animaciones condicionadas al scroll (\`whileInView\`), efectos hover, y controlamos el montaje/desmontaje de componentes usando \`AnimatePresence\`.",
     achievements: [
       "Implementación de transiciones de entrada orquestadas (Stagger children).",
       "Configuración de micro-interacciones hover y tap con resortes.",
@@ -143,7 +148,8 @@ const weeksData = [
     videoId: "bMknfKXIFA8",
     resources: [
       { name: "Framer Motion Docs", url: "https://www.framer.com/motion/" },
-      { name: "Spring Physics Explained", url: "https://www.joshwcomeau.com/animation/a-friendly-introduction-to-spring-physics/" }
+      { name: "Spring Physics Explained", url: "https://www.joshwcomeau.com/animation/a-friendly-introduction-to-spring-physics/" },
+      { name: "Proyecto Semanal: Web Orion", url: "https://github.com/Adat13/WebOrion" }
     ]
   },
   {
@@ -151,7 +157,7 @@ const weeksData = [
     title: "Semana 7: Gráficos 3D en la Web",
     period: "Three.js & React Three Fiber",
     summary: "Creación de experiencias inmersivas 3D embebidas directamente en el navegador mediante WebGL, Three.js y React Three Fiber.",
-    extendedDescription: "Rompimos la barrera del 2D. En esta semana, exploramos el poder de WebGL a través de `Three.js` y su contraparte de React, `@react-three/fiber`. Aprendimos sobre mallas (meshes), geometrías, materiales, luces y cámaras. Construimos entornos 3D interactivos, integramos modelos y programamos lógicas de renderizado frame por frame (`useFrame`), lo que nos permitió construir este mismo portafolio 3D interactivo en el que puedes conducir un auto.",
+    extendedDescription: "Rompimos la barrera del 2D. En esta semana, exploramos el poder de WebGL a través de \`Three.js\` y su contraparte de React, \`@react-three/fiber\`. Aprendimos sobre mallas (meshes), geometrías, materiales, luces y cámaras. Construimos entornos 3D interactivos, integramos modelos y programamos lógicas de renderizado frame por frame (\`useFrame\`), lo que nos permitió construir este mismo portafolio 3D interactivo en el que puedes conducir un auto.",
     achievements: [
       "Configuración de escenas 3D, cámaras y luces espaciales (Ambient, Point, Directional).",
       "Creación e instanciación de geometrías primitivas y personalizadas.",
@@ -166,7 +172,8 @@ const weeksData = [
     videoId: "xJAfLdUgdc4",
     resources: [
       { name: "React Three Fiber Docs", url: "https://docs.pmnd.rs/react-three-fiber/getting-started/introduction" },
-      { name: "Three.js Fundamentals", url: "https://threejs.org/manual/" }
+      { name: "Three.js Fundamentals", url: "https://threejs.org/manual/" },
+      { name: "Proyecto Semanal: Práctica 07", url: "https://github.com/Adat13/PRACTICA_07" }
     ]
   },
   {
@@ -189,7 +196,8 @@ const weeksData = [
     videoId: "KCrXgy8qtjM",
     resources: [
       { name: "Vite Deploying a Static Site", url: "https://vitejs.dev/guide/static-deploy.html" },
-      { name: "Web Performance Best Practices", url: "https://web.dev/fast/" }
+      { name: "Web Performance Best Practices", url: "https://web.dev/fast/" },
+      { name: "Proyecto Semanal: Portafolio ADAT MARC", url: "https://github.com/Adat13/adat-marc-landing" }
     ]
   }
 ];
@@ -199,10 +207,10 @@ const teamMember = {
   role: "Desarrollador Full Stack & UI/UX",
   bio: "Estudiante apasionado de la ingeniería de software y desarrollo web. Me especializo en crear interfaces web hermosas, dinámicas y altamente interactivas usando herramientas modernas como React, CSS avanzado, Framer Motion y gráficos web en 3D.",
   stats: [
-    { label: "Semanas Completadas", value: "8/8", icon: Calendar },
-    { label: "Proyectos en Git", value: "12+", icon: GitBranch },
-    { label: "Líneas de Código", value: "8K+", icon: Code2 },
-    { label: "Tazas de Café", value: "150+", icon: Coffee }
+    { label: "Proyectos Completados", value: "12+", icon: CheckCircle },
+    { label: "Implementaciones", value: "10+", icon: Wrench },
+    { label: "Innovación", value: "100%", icon: Sparkles },
+    { label: "Clientes Estratégicos", value: "7+", icon: User }
   ],
   skills: [
     { name: "React / JavaScript (ES6+)", level: 92 },
@@ -367,7 +375,7 @@ const TeamPortfolio = () => {
               <iframe 
                 width="100%" 
                 height="215" 
-                src={`https://www.youtube.com/embed/${week.videoId}?rel=0&modestbranding=1`} 
+                src={`https://www.youtube-nocookie.com/embed/${week.videoId}`} 
                 title="YouTube video player" 
                 frameBorder="0" 
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
@@ -414,8 +422,9 @@ const TeamPortfolio = () => {
               className="profile-avatar"
               whileHover={{ scale: 1.05 }}
               transition={{ type: "spring", stiffness: 300, damping: 10 }}
+              style={{ padding: 0, overflow: 'hidden' }}
             >
-              <User size={80} className="avatar-icon" />
+              <img src={profilePic} alt="David" style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
             </motion.div>
             <div className="avatar-glow"></div>
           </div>
