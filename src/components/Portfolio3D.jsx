@@ -64,7 +64,7 @@ const generateTrees = () => {
 };
 
 // ---- KEYBOARD HOOK ----
-const useKeyboardControls = () => {
+const useKeyboardControls = (externalKeys) => {
   const [keys, setKeys] = useState({
     forward: false, backward: false, left: false, right: false, handbrake: false
   });
@@ -84,8 +84,80 @@ const useKeyboardControls = () => {
     window.addEventListener('keyup', u, { passive: false });
     return () => { window.removeEventListener('keydown', d); window.removeEventListener('keyup', u); };
   }, []);
-  return keys;
+
+  // Merge keyboard keys with external touch keys
+  return {
+    forward:   keys.forward   || (externalKeys?.forward   ?? false),
+    backward:  keys.backward  || (externalKeys?.backward  ?? false),
+    left:      keys.left      || (externalKeys?.left      ?? false),
+    right:     keys.right     || (externalKeys?.right     ?? false),
+    handbrake: keys.handbrake || (externalKeys?.handbrake ?? false),
+  };
 };
+
+// ---- MOBILE TOUCH CONTROLS ----
+const MobileControls = ({ onKeysChange }) => {
+  const pressed = useRef({});
+
+  const setKey = (key, val) => {
+    pressed.current = { ...pressed.current, [key]: val };
+    onKeysChange({ ...pressed.current });
+  };
+
+  const btnStyle = (color = '#00f5ff') => ({
+    width: '60px',
+    height: '60px',
+    borderRadius: '50%',
+    background: `rgba(${color === '#00f5ff' ? '0,245,255' : '255,100,100'},0.15)`,
+    border: `2px solid ${color}`,
+    color: color,
+    fontSize: '1.4rem',
+    display: 'flex',
+    alignItems: 'center',
+    justifyContent: 'center',
+    cursor: 'pointer',
+    userSelect: 'none',
+    WebkitUserSelect: 'none',
+    touchAction: 'none',
+    boxShadow: `0 0 12px ${color}55`,
+    transition: 'transform 0.1s',
+    flexShrink: 0,
+  });
+
+  const mkHandlers = (key, color) => ({
+    onTouchStart: (e) => { e.preventDefault(); setKey(key, true); },
+    onTouchEnd:   (e) => { e.preventDefault(); setKey(key, false); },
+    onMouseDown:  ()  => setKey(key, true),
+    onMouseUp:    ()  => setKey(key, false),
+    onMouseLeave: ()  => setKey(key, false),
+    style: btnStyle(color),
+  });
+
+  return (
+    <div style={{
+      position: 'absolute', bottom: '16px', left: 0, right: 0,
+      display: 'flex', justifyContent: 'space-between',
+      alignItems: 'flex-end', padding: '0 12px',
+      zIndex: 200, pointerEvents: 'none',
+    }}>
+      {/* Left cluster: left / right / brake */}
+      <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', gap: '8px', pointerEvents: 'auto' }}>
+        <div style={{ display: 'flex', gap: '8px' }}>
+          <div {...mkHandlers('left')}>◀</div>
+          <div {...mkHandlers('handbrake', '#ff6464')}>■</div>
+          <div {...mkHandlers('right')}>▶</div>
+        </div>
+      </div>
+
+      {/* Right cluster: forward / backward */}
+      <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', gap: '8px', pointerEvents: 'auto' }}>
+        <div {...mkHandlers('forward')}>▲</div>
+        <div {...mkHandlers('backward')}>▼</div>
+      </div>
+    </div>
+  );
+};
+
 
 // ---- SMOOTH CURVED ROAD ----
 const CurvedRoad = () => {
@@ -598,7 +670,9 @@ let TREE_DATA = [];
 
 // ---- MAIN 3D SCENE ----
 const Portfolio3D = ({ weeks, activeWeek, onActiveWeekChange }) => {
-  const keys = useKeyboardControls();
+  const [touchKeys, setTouchKeys] = useState({ forward: false, backward: false, left: false, right: false, handbrake: false });
+  const keys = useKeyboardControls(touchKeys);
+  const [isMobile] = useState(() => window.innerWidth <= 768);
   const [carState, setCarState] = useState({ pos: { x: 0, z: 0 }, speed: 0, braking: false });
   const [trees] = useState(() => { const t = generateTrees(); TREE_DATA = t; return t; });
 
@@ -681,6 +755,9 @@ const Portfolio3D = ({ weeks, activeWeek, onActiveWeekChange }) => {
         {/* Car */}
         <Car keys={keys} onZoneCheck={handleZone} onPosUpdate={(p,s,b) => setCarState({pos:p,speed:s,braking:b})} startPos={[0, 0.16, 0]} />
       </Canvas>
+
+      {/* Mobile touch controls */}
+      {isMobile && <MobileControls onKeysChange={setTouchKeys} />}
 
       {activeWeek && (
         <div className="active-zone-banner" style={{ borderLeft: `5px solid ${weeks[activeWeek-1].color}` }}>

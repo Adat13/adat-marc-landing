@@ -21,7 +21,18 @@ body {
   background-color: var(--bg-dark);
   color: var(--text-main);
   overflow-x: hidden;
+  max-width: 100vw;
   line-height: 1.7;
+}
+
+html {
+  overflow-x: hidden;
+  max-width: 100%;
+}
+
+* {
+  box-sizing: border-box;
+  min-width: 0;
 }
 
 /* Glassmorphism utility */
@@ -1255,6 +1266,290 @@ kbd {
     left: 20px;
     right: 20px;
     max-width: none;
+  }
+}
+
+
+/* ==========================================
+   MOBILE RESPONSIVENESS (max-width: 768px)
+   ========================================== */
+
+@media (max-width: 768px) {
+
+  /* ---- HERO ---- */
+  .hero-section {
+    padding-top: 100px;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    min-height: 100svh;
+  }
+
+  .hero-title {
+    font-size: clamp(2rem, 9vw, 3rem) !important;
+    line-height: 1.15;
+    min-height: unset !important;
+  }
+
+  .hero-description {
+    font-size: 1rem;
+    min-height: unset !important;
+    padding: 0 0.5rem;
+  }
+
+  /* Buttons side by side → stack */
+  .hero-section .d-flex.gap-3 {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .hero-section .d-flex.gap-3 a {
+    width: 100%;
+    max-width: 280px;
+    text-align: center;
+  }
+
+  /* ---- NAVBAR ---- */
+  #header .container {
+    padding: 0 1rem;
+  }
+
+  #header img {
+    height: 36px !important;
+  }
+
+  /* ---- PROFILE CARD ---- */
+  .profile-container {
+    padding: 1.5rem;
+  }
+
+  .profile-header {
+    flex-direction: column;
+    text-align: center;
+    gap: 1.2rem;
+  }
+
+  .profile-avatar {
+    width: 110px;
+    height: 110px;
+  }
+
+  .profile-name {
+    font-size: 1.8rem;
+  }
+
+  .profile-role {
+    font-size: 1rem;
+  }
+
+  .profile-bio {
+    font-size: 0.95rem;
+  }
+
+  /* Stats boxes → 2 per row */
+  .profile-container > div[style*="grid"] {
+    grid-template-columns: 1fr 1fr !important;
+    gap: 0.8rem !important;
+  }
+
+  /* ---- SKILLS ---- */
+  .skills-grid {
+    grid-template-columns: 1fr;
+  }
+
+  /* ---- WEEKS GRID ---- */
+  .weeks-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .section-header-centered .section-title {
+    font-size: 1.8rem;
+  }
+
+  /* Toggle buttons → stack */
+  div[style*="inline-flex"][style*="0.5rem"] {
+    flex-direction: column;
+    width: 100%;
+    max-width: 320px;
+    margin: 0 auto;
+  }
+
+  /* ---- WEEK DETAIL ---- */
+  .week-detail-page {
+    padding: 1.5rem;
+  }
+
+  .week-detail-grid {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+
+  .week-detail-title {
+    font-size: 1.5rem;
+  }
+
+  /* ---- SECTION TITLES ---- */
+  .section-title {
+    font-size: 1.8rem !important;
+  }
+
+  /* ---- ABOUT / CONTACT / SERVICES ---- */
+  .container {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+
+  /* Services cards always 1 column */
+  .col-xl-4 {
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+
+  /* Contact form padding */
+  form.p-5 {
+    padding: 1.5rem !important;
+  }
+
+  /* ---- STATS SECTION ---- */
+  #stats .row {
+    gap: 1rem;
+  }
+
+  #stats .col-lg-3 {
+    flex: 0 0 calc(50% - 0.5rem);
+    max-width: calc(50% - 0.5rem);
+  }
+
+  /* ---- CODE BLOCK ---- */
+  .code-body {
+    font-size: 0.8rem;
+    padding: 1rem;
+  }
+
+  /* ---- VIDEO IFRAME ---- */
+  iframe {
+    height: 180px !important;
+  }
+}
+
+/* Extra small screens */
+@media (max-width: 400px) {
+  .hero-title {
+    font-size: 1.8rem !important;
+  }
+
+  #stats .col-lg-3 {
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+
+  .profile-container > div[style*="grid"] {
+    grid-template-columns: 1fr !important;
+  }
+}
+
+/* ==========================================
+   WEEK DETAIL MOBILE OVERFLOW FIX
+   ========================================== */
+@media (max-width: 900px) {
+  /* Force single column layout */
+  .week-detail-grid {
+    grid-template-columns: 1fr !important;
+    gap: 1.5rem !important;
+    width: 100% !important;
+    overflow: hidden;
+  }
+
+  .week-detail-page {
+    padding: 1rem !important;
+    overflow: hidden !important;
+    width: 100% !important;
+    max-width: 100% !important;
+  }
+
+  /* Prevent ALL children from overflowing */
+  .week-detail-page * {
+    max-width: 100%;
+  }
+
+  /* Prevent text from overflowing */
+  .week-detail-desc,
+  .week-detail-title,
+  .week-achievements li,
+  .week-detail-period {
+    word-break: break-word;
+    overflow-wrap: break-word;
+    max-width: 100%;
+  }
+
+  .week-detail-title {
+    font-size: 1.3rem !important;
+  }
+
+  /* Code block horizontal scroll instead of overflow */
+  .code-body {
+    overflow-x: auto !important;
+    white-space: pre !important;
+    max-width: 100%;
+    font-size: 0.75rem !important;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  .code-body code {
+    font-size: 0.75rem !important;
+    white-space: pre;
+  }
+
+  .code-header {
+    overflow: hidden;
+  }
+
+  /* Week detail code section full width */
+  .week-detail-code {
+    width: 100%;
+    overflow: hidden;
+  }
+
+  /* Image inside week detail */
+  .week-detail-page img {
+    width: 100% !important;
+    height: auto !important;
+  }
+
+  /* Resources list wrap properly */
+  .week-detail-page a {
+    word-break: break-all;
+    overflow-wrap: anywhere;
+  }
+
+  /* Banner on 3D mode */
+  .active-zone-banner {
+    flex-direction: column !important;
+    gap: 0.5rem !important;
+    padding: 0.8rem !important;
+    font-size: 0.85rem;
+  }
+
+  .active-zone-banner h5 {
+    font-size: 0.9rem !important;
+    margin-top: 0.2rem !important;
+  }
+
+  /* Profile container full width */
+  .profile-container {
+    width: 100% !important;
+    overflow: hidden !important;
+  }
+
+  /* Weeks section container */
+  .weeks-section-container {
+    width: 100% !important;
+    overflow: hidden !important;
+  }
+
+  /* Week card */
+  .week-card {
+    width: 100% !important;
+    overflow: hidden !important;
   }
 }
 
