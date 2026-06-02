@@ -335,7 +335,6 @@ const projectsConcluidos = [
     description: "Laboratorio interactivo y manipulaciones avanzadas de DOM para el registro y gestión de datos académicos.",
     tools: ["JavaScript ES6+", "DOM Manipulation", "EventListeners"],
     link: "https://github.com/Adat13/DESARROLLO-WEB-FIS",
-    deploy: "https://adat13.github.io/DESARROLLO-WEB-FIS/",
     category: "Semana 4"
   },
   {
@@ -367,7 +366,7 @@ const projectsConcluidos = [
     description: "Este mismo portafolio integrado con la landing page de ADAT MARC, optimizado para alto rendimiento y desplegado en GitHub Pages.",
     tools: ["Vite Build", "React", "Deployment"],
     link: "https://github.com/Adat13/adat-marc-landing",
-    deploy: "https://adat13.github.io/adat-marc-landing/",
+    deploy: "https://adat-marc.com/",
     category: "Semana 8"
   }
 ];
@@ -819,15 +818,33 @@ const TeamPortfolio = () => {
                   <Github size={14} /> Repositorio
                 </a>
                 {project.deploy && (
-                  <a 
-                    href={project.deploy} 
-                    target="_blank" 
-                    rel="noopener noreferrer" 
-                    className="btn btn-primary d-flex align-items-center justify-content-center gap-2"
-                    style={{ flex: 1, fontSize: '0.8rem', padding: '0.5rem 0.5rem', borderRadius: '8px', background: 'var(--accent-gradient)', border: 'none', color: '#fff', boxShadow: '0 2px 8px var(--primary-glow)', whiteSpace: 'nowrap' }}
-                  >
-                    <Globe size={14} /> Sitio Web
-                  </a>
+                  project.title.includes("Auto 3D Simulator") ? (
+                    <button 
+                      onClick={(e) => {
+                        e.preventDefault();
+                        setIs3DMode(true);
+                        setSelectedWeek(null);
+                        setTimeout(() => {
+                          const el = document.getElementById('week-details-anchor');
+                          if (el) el.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                        }, 100);
+                      }}
+                      className="btn btn-primary d-flex align-items-center justify-content-center gap-2"
+                      style={{ flex: 1, fontSize: '0.8rem', padding: '0.5rem 0.5rem', borderRadius: '8px', background: 'var(--accent-gradient)', border: 'none', color: '#fff', boxShadow: '0 2px 8px var(--primary-glow)', whiteSpace: 'nowrap' }}
+                    >
+                      <Globe size={14} /> Probar 3D
+                    </button>
+                  ) : (
+                    <a 
+                      href={project.deploy} 
+                      target="_blank" 
+                      rel="noopener noreferrer" 
+                      className="btn btn-primary d-flex align-items-center justify-content-center gap-2"
+                      style={{ flex: 1, fontSize: '0.8rem', padding: '0.5rem 0.5rem', borderRadius: '8px', background: 'var(--accent-gradient)', border: 'none', color: '#fff', boxShadow: '0 2px 8px var(--primary-glow)', whiteSpace: 'nowrap' }}
+                    >
+                      <Globe size={14} /> Sitio Web
+                    </a>
+                  )
                 )}
               </div>
             </motion.div>
