@@ -27,6 +27,8 @@ const weeksData = [
     color: "#00f5ff",
     image: "https://images.unsplash.com/photo-1555066931-4365d14bab8c?auto=format&fit=crop&q=80&w=800",
     videoId: "8JJ101D3knE",
+    myNotes: "Esta semana fue clave para entender cómo funciona Git desde cero. Lo que más me costó fue entender las ramas, pero luego de practicar varias veces, ya se me hizo natural.",
+    myReflection: "Aprendí que un buen control de versiones es la base de todo proyecto serio. Desde ahora veo Git no como una obligación, sino como mi aliado.",
     resources: [
       { name: "Documentación oficial de Git", url: "https://git-scm.com/doc" },
       { name: "Guía de Node.js", url: "https://nodejs.org/" }
@@ -50,6 +52,8 @@ const weeksData = [
     color: "#7000ff",
     image: "https://images.unsplash.com/photo-1627398240411-8ac59774139a?auto=format&fit=crop&q=80&w=800",
     videoId: "pQN-pnXPaVg",
+    myNotes: "Fue interesante ver la diferencia entre usar divs para todo versus usar etiquetas semánticas. Me sorprendió cuánto afecta la estructura al SEO.",
+    myReflection: "Entendí que escribir HTML semántico no es solo para las máquinas, sino también para que cualquier desarrollador lea el código y lo entienda rápido.",
     resources: [
       { name: "MDN Web Docs - HTML", url: "https://developer.mozilla.org/es/docs/Web/HTML" },
       { name: "Guía de SEO para principiantes", url: "https://developers.google.com/search/docs/fundamentals/seo-starter-guide" },
@@ -74,6 +78,8 @@ const weeksData = [
     color: "#ff007f",
     image: "https://images.unsplash.com/photo-1507721999472-8ed4421c4af2?auto=format&fit=crop&q=80&w=800",
     videoId: "yfoY53QXEnI",
+    myNotes: "CSS Grid me voló la cabeza. Antes solo usaba Flexbox para todo, pero Grid me dio un control total sobre el layout en dos dimensiones. Las variables CSS también me cambiaron la vida.",
+    myReflection: "Esta semana entendí que el diseño responsivo no es un extra, es una responsabilidad. Si tu web no funciona en celular, no sirve.",
     resources: [
       { name: "A Complete Guide to Flexbox", url: "https://css-tricks.com/snippets/css/a-guide-to-flexbox/" },
       { name: "A Complete Guide to Grid", url: "https://css-tricks.com/snippets/css/complete-guide-grid/" },
@@ -98,6 +104,8 @@ const weeksData = [
     color: "#00ff66",
     image: "https://images.unsplash.com/photo-1579468118864-1b9ea3c0db4a?auto=format&fit=crop&q=80&w=800",
     videoId: "W6NZfCO5SIk",
+    myNotes: "La manipulación del DOM se volvió mi juguete favorito. Ver cómo el scroll cambia la navbar en tiempo real fue muy satisfactorio. Los eventos son más potentes de lo que pensaba.",
+    myReflection: "JavaScript le da vida a todo. Esta semana pasé de hacer páginas estáticas a crear experiencias reales de usuario. Fue un salto enorme.",
     resources: [
       { name: "JavaScript Info Tutorial", url: "https://javascript.info/" },
       { name: "MDN DOM Manipulation", url: "https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Client-side_web_APIs/Manipulating_documents" },
@@ -122,6 +130,8 @@ const weeksData = [
     color: "#ffaa00",
     image: "https://images.unsplash.com/photo-1633356122544-f134324a6cee?auto=format&fit=crop&q=80&w=800",
     videoId: "bMknfKXIFA8",
+    myNotes: "Al principio JSX me confundía mucho, mezclar HTML con JavaScript se sentía raro. Pero después de entender el flujo de datos con Props y useState, todo empezó a tener sentido.",
+    myReflection: "React cambió por completo mi forma de pensar el código. Ya no pienso en páginas, sino en componentes reutilizables. Es un antes y un después en mi aprendizaje.",
     resources: [
       { name: "React Official Docs", url: "https://react.dev/" },
       { name: "Vite JS Guide", url: "https://vitejs.dev/guide/" },
@@ -146,6 +156,8 @@ const weeksData = [
     color: "#00f5ff",
     image: "https://images.unsplash.com/photo-1550745165-9bc0b252726f?auto=format&fit=crop&q=80&w=800",
     videoId: "bMknfKXIFA8",
+    myNotes: "Framer Motion me pareció increíble. Con pocas líneas de código logré animaciones que antes me hubieran tomado horas con CSS puro. El AnimatePresence es lo que más usé.",
+    myReflection: "Las animaciones no son decoración, son comunicación. Una buena transición le dice al usuario que algo cambió sin necesidad de palabras.",
     resources: [
       { name: "Framer Motion Docs", url: "https://www.framer.com/motion/" },
       { name: "Spring Physics Explained", url: "https://www.joshwcomeau.com/animation/a-friendly-introduction-to-spring-physics/" },
@@ -170,6 +182,8 @@ const weeksData = [
     color: "#7000ff",
     image: "https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?auto=format&fit=crop&q=80&w=800",
     videoId: "xJAfLdUgdc4",
+    myNotes: "Three.js fue lo más desafiante de todo el curso. Entender meshes, luces y la cámara me tomó bastante tiempo, pero cuando vi el auto moverse en 3D dentro del browser, valió cada minuto.",
+    myReflection: "El 3D en la web es el futuro. Esta semana me demostró que el navegador puede hacer cosas que antes solo eran posibles en aplicaciones nativas o videojuegos.",
     resources: [
       { name: "React Three Fiber Docs", url: "https://docs.pmnd.rs/react-three-fiber/getting-started/introduction" },
       { name: "Three.js Fundamentals", url: "https://threejs.org/manual/" },
@@ -194,6 +208,8 @@ const weeksData = [
     color: "#00ff66",
     image: "https://images.unsplash.com/photo-1618401471353-b98afee0b2eb?auto=format&fit=crop&q=80&w=800",
     videoId: "KCrXgy8qtjM",
+    myNotes: "La semana final fue de unir todo. Optimizar el bundle, limpiar el código y hacer el deploy fue agotador pero muy satisfactorio. Ver la página en vivo fue el mejor premio.",
+    myReflection: "Este curso me demostró que puedo aprender cualquier tecnología si la practico constantemente. Empecé sin saber qué era un componente y terminé con un portafolio 3D en producción.",
     resources: [
       { name: "Vite Deploying a Static Site", url: "https://vitejs.dev/guide/static-deploy.html" },
       { name: "Web Performance Best Practices", url: "https://web.dev/fast/" },
@@ -320,6 +336,48 @@ const TeamPortfolio = () => {
               ))}
             </ul>
           </div>
+
+          {/* Mis Apuntes y Reflexión */}
+          {week.myNotes && (
+            <motion.div
+              initial={{ opacity: 0, y: 10 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: 0.3 }}
+              style={{ marginTop: '2rem', display: 'flex', flexDirection: 'column', gap: '1rem' }}
+            >
+              {/* Apuntes */}
+              <div style={{
+                background: `${week.color}0d`,
+                border: `1px solid ${week.color}33`,
+                borderLeft: `4px solid ${week.color}`,
+                borderRadius: '12px',
+                padding: '1.2rem',
+              }}>
+                <h5 style={{ color: week.color, fontSize: '0.9rem', fontWeight: 700, marginBottom: '0.6rem', display: 'flex', alignItems: 'center', gap: '0.4rem' }}>
+                  <BookOpen size={15} /> Mis Apuntes
+                </h5>
+                <p style={{ color: 'var(--text-dim)', fontSize: '0.9rem', lineHeight: '1.7', margin: 0 }}>
+                  {week.myNotes}
+                </p>
+              </div>
+
+              {/* Reflexión */}
+              <div style={{
+                background: 'rgba(112, 0, 255, 0.07)',
+                border: '1px solid rgba(112, 0, 255, 0.25)',
+                borderLeft: '4px solid var(--secondary)',
+                borderRadius: '12px',
+                padding: '1.2rem',
+              }}>
+                <h5 style={{ color: 'var(--secondary)', fontSize: '0.9rem', fontWeight: 700, marginBottom: '0.6rem', display: 'flex', alignItems: 'center', gap: '0.4rem' }}>
+                  <Star size={15} /> Mi Reflexión
+                </h5>
+                <p style={{ color: 'var(--text-dim)', fontSize: '0.9rem', lineHeight: '1.7', margin: 0, fontStyle: 'italic' }}>
+                  "{week.myReflection}"
+                </p>
+              </div>
+            </motion.div>
+          )}
 
           <div style={{ marginTop: '2.5rem' }}>
             <h4 style={{ fontSize: '1rem', color: '#fff', marginBottom: '1rem', display: 'flex', alignItems: 'center', gap: '0.5rem' }}>

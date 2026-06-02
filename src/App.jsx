@@ -58,6 +58,7 @@ function App() {
               <li><a href="#about" className="text-decoration-none text-light">NOSOTROS</a></li>
               <li><a href="#services" className="text-decoration-none text-light">SERVICIOS</a></li>
               <li><a href="#portfolio" className="text-decoration-none text-light">PORTAFOLIO</a></li>
+              <li><a href="#week-details-anchor" className="text-decoration-none text-light">CUADERNO</a></li>
               <li><a href="#contact" className="text-decoration-none text-light">CONTACTO</a></li>
             </ul>
           </nav>
