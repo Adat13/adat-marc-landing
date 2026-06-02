@@ -82,7 +82,7 @@ const weeksData = [
     codeSnippet: `<header>\n  <nav aria-label="Main Navigation">\n    <h1 className="logo-text">ADAT MARC</h1>\n  </nav>\n</header>\n<main>\n  <section id="hero">\n    ...\n  </section>\n</main>`,
     icon: Globe,
     color: "#7000ff",
-    image: "https://images.unsplash.com/photo-1627398240411-8ac59774139a?auto=format&fit=crop&q=80&w=800",
+    image: "https://images.unsplash.com/photo-1542831371-29b0f74f9713?auto=format&fit=crop&q=80&w=800",
     videoId: "pQN-pnXPaVg",
     myNotes: "La transición del HTML básico al HTML5 semántico supuso un cambio cualitativo en la forma de estructurar la información en la web. Anoté los siguientes puntos clave:\n1. Semántica frente a Estética: Las etiquetas semánticas (<header>, <nav>, <main>, <section>, <article>, <aside>, <footer>) no tienen un impacto visual inmediato por defecto, pero informan a los motores de búsqueda y lectores de pantalla sobre el propósito y la relevancia jerárquica del contenido.\n2. SEO On-Page: Investigamos la importancia de los metadatos dinámicos (<meta name='description'>, Open Graph, Twitter Cards) y las etiquetas del encabezado (<title>, favicon) para maximizar la indexación en buscadores.\n3. Validación W3C: El uso estricto del validador W3C nos permitió detectar etiquetas mal cerradas o anidamientos inválidos, asegurando la robustez en la maquetación de 'Pastelería Dulzemi'.",
     myReflection: "Entendí que escribir HTML semántico no es solo para las máquinas, sino también para que cualquier desarrollador lea el código y lo entienda rápido.",
