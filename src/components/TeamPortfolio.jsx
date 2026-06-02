@@ -501,16 +501,16 @@ const TeamPortfolio = () => {
           {/* Toggle View Mode Buttons */}
           <div style={{ display: 'inline-flex', gap: '0.5rem', background: '#0e111a', border: '1px solid var(--glass-border)', padding: '0.4rem', borderRadius: '12px', zIndex: 10 }}>
             <button 
-              className={`btn ${!is3DMode ? 'btn-primary' : 'btn-outline'}`} 
+              className={`btn ${!is3DMode ? 'btn-primary' : ''}`} 
               onClick={() => { setIs3DMode(false); setSelectedWeek(null); }}
-              style={{ padding: '0.5rem 1.2rem', fontSize: '0.85rem', borderRadius: '8px', boxShadow: !is3DMode ? '0 0 10px var(--primary-glow)' : 'none' }}
+              style={{ padding: '0.5rem 1.2rem', fontSize: '0.85rem', borderRadius: '8px', boxShadow: !is3DMode ? '0 0 10px var(--primary-glow)' : 'none', color: !is3DMode ? '#fff' : '#8a9ab0' }}
             >
               Vista de Lista Extendida
             </button>
             <button 
-              className={`btn ${is3DMode ? 'btn-primary' : 'btn-outline'}`} 
+              className={`btn ${is3DMode ? 'btn-primary' : ''}`} 
               onClick={() => { setIs3DMode(true); setSelectedWeek(null); }}
-              style={{ padding: '0.5rem 1.2rem', fontSize: '0.85rem', borderRadius: '8px', boxShadow: is3DMode ? '0 0 10px var(--primary-glow)' : 'none' }}
+              style={{ padding: '0.5rem 1.2rem', fontSize: '0.85rem', borderRadius: '8px', boxShadow: is3DMode ? '0 0 10px var(--primary-glow)' : 'none', color: is3DMode ? '#fff' : '#8a9ab0' }}
             >
               Portafolio Interactivo 3D
             </button>

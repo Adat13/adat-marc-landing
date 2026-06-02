@@ -1,29 +1,46 @@
 import React, { useState, useEffect } from 'react';
-import { motion } from 'framer-motion';
+import { motion, AnimatePresence } from 'framer-motion';
 import TeamPortfolio from './components/TeamPortfolio';
+import ParticleBackground from './components/ParticleBackground';
 import './App.css';
 
 function App() {
   const [heroText, setHeroText] = useState({ title: '', slogan: '' });
+  const [textIndex, setTextIndex] = useState(0);
+
+  const titulos = [
+    "INNOVA. CONECTA. AVANZA.",
+    "CREA. SOLUCIONA. IMPULSA.",
+    "IMAGINA. DISEÑA. TRANSFORMA.",
+    "EVOLUCIONA. IMPLEMENTA. LIDERA."
+  ];
+  const slogans = [
+    "Tecnología que impulsa tu empresa.",
+    "Hardware y Software a tu medida.",
+    "Soluciones digitales para tu crecimiento.",
+    "Innovación que transforma negocios."
+  ];
 
   useEffect(() => {
-    const titulos = [
-      "INNOVA. CONECTA. AVANZA.",
-      "CREA. SOLUCIONA. IMPULSA.",
-      "IMAGINA. DISEÑA. TRANSFORMA.",
-      "EVOLUCIONA. IMPLEMENTA. LIDERA."
-    ];
-    const slogans = [
-      "Tecnología que impulsa tu empresa.",
-      "Hardware y Software a tu medida.",
-      "Soluciones digitales para tu crecimiento.",
-      "Innovación que transforma negocios.",
-      "Tecnología que conecta y evoluciona."
-    ];
+    // Initial set
     setHeroText({
-      title: titulos[Math.floor(Math.random() * titulos.length)],
-      slogan: slogans[Math.floor(Math.random() * slogans.length)]
+      title: titulos[0],
+      slogan: slogans[0]
     });
+
+    // 6-second interval
+    const interval = setInterval(() => {
+      setTextIndex((prevIndex) => {
+        const nextIndex = (prevIndex + 1) % titulos.length;
+        setHeroText({
+          title: titulos[nextIndex],
+          slogan: slogans[nextIndex]
+        });
+        return nextIndex;
+      });
+    }, 6000);
+
+    return () => clearInterval(interval);
   }, []);
 
   return (
@@ -32,7 +49,6 @@ function App() {
       <header id="header" className="fixed-top" style={{ background: 'rgba(10, 13, 20, 0.85)', backdropFilter: 'blur(10px)', borderBottom: '1px solid rgba(255,255,255,0.05)', padding: '15px 0', zIndex: 999 }}>
         <div className="container d-flex align-items-center justify-content-between">
           <a href="/" className="logo d-flex align-items-center text-decoration-none">
-            {/* The AdatLogo.svg was light/dark? If it was dark, it might need brightness inversion, but we'll leave it as is */}
             <img src="/AdatLogo.svg" alt="ADAT Logo" style={{ height: '45px', filter: 'drop-shadow(0 0 8px rgba(0,245,255,0.4))' }} />
           </a>
           
@@ -46,31 +62,32 @@ function App() {
             </ul>
           </nav>
 
-          <a className="btn btn-primary rounded-pill px-4" style={{ background: 'var(--accent-gradient)', border: 'none', fontWeight: 'bold', color: '#fff', boxShadow: '0 4px 15px var(--primary-glow)' }} href="#about">COTIZAR</a>
+          <a className="btn btn-primary rounded-pill px-4" style={{ background: 'var(--accent-gradient)', border: 'none', fontWeight: 'bold', color: '#fff', boxShadow: '0 4px 15px var(--primary-glow)' }} href="#contact">COTIZAR</a>
         </div>
       </header>
 
       <main className="main">
         {/* Hero Section */}
-        <section id="hero" className="hero-section">
-          <div className="hero-content">
-            <motion.h2 
-              initial={{ opacity: 0, y: 30 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
-              className="hero-title"
-            >
-              <span>{heroText.title.split('.')[0]}.</span> <br/>
-              <span style={{ WebkitTextFillColor: '#fff' }}>{heroText.title.substring(heroText.title.indexOf('.') + 1)}</span>
-            </motion.h2>
-            <motion.p 
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              transition={{ delay: 0.4, duration: 0.8 }}
-              className="hero-description"
-            >
-              {heroText.slogan}
-            </motion.p>
+        <section id="hero" className="hero-section" style={{ position: 'relative', overflow: 'hidden' }}>
+          <ParticleBackground />
+          <div className="hero-content" style={{ position: 'relative', zIndex: 10 }}>
+            <AnimatePresence mode="wait">
+              <motion.div
+                key={textIndex}
+                initial={{ opacity: 0, y: 30, filter: 'blur(10px)' }}
+                animate={{ opacity: 1, y: 0, filter: 'blur(0px)' }}
+                exit={{ opacity: 0, y: -30, filter: 'blur(10px)' }}
+                transition={{ duration: 0.8, ease: "easeInOut" }}
+              >
+                <h2 className="hero-title" style={{ minHeight: '120px' }}>
+                  <span>{heroText.title.split('.')[0]}.</span> <br/>
+                  <span style={{ WebkitTextFillColor: '#fff' }}>{heroText.title.substring(heroText.title.indexOf('.') + 1)}</span>
+                </h2>
+                <p className="hero-description" style={{ minHeight: '30px' }}>
+                  {heroText.slogan}
+                </p>
+              </motion.div>
+            </AnimatePresence>
             <motion.div 
               initial={{ opacity: 0, scale: 0.9 }}
               animate={{ opacity: 1, scale: 1 }}
@@ -225,7 +242,7 @@ function App() {
                     </div>
                     <div>
                       <h4 className="mb-1 text-light" style={{ fontWeight: 700, fontSize: '1.1rem' }}>Dirección</h4>
-                      <p className="mb-0" style={{ color: 'var(--text-dim)' }}>Oficina Principal, Ciudad</p>
+                      <p className="mb-0" style={{ color: 'var(--text-dim)' }}>Huancayo, Perú</p>
                     </div>
                   </div>
                 </div>
@@ -236,7 +253,7 @@ function App() {
                     </div>
                     <div>
                       <h4 className="mb-1 text-light" style={{ fontWeight: 700, fontSize: '1.1rem' }}>Llámanos</h4>
-                      <p className="mb-0" style={{ color: 'var(--text-dim)' }}>+1 5589 55488 55</p>
+                      <p className="mb-0" style={{ color: 'var(--text-dim)' }}>+51 937 480 592</p>
                     </div>
                   </div>
                 </div>
@@ -247,7 +264,7 @@ function App() {
                     </div>
                     <div>
                       <h4 className="mb-1 text-light" style={{ fontWeight: 700, fontSize: '1.1rem' }}>Email</h4>
-                      <p className="mb-0" style={{ color: 'var(--text-dim)' }}>info@adat-marc.com</p>
+                      <p className="mb-0" style={{ color: 'var(--text-dim)' }}>davi.toribio2610@gmail.com</p>
                     </div>
                   </div>
                 </div>
