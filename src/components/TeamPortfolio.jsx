@@ -14,7 +14,13 @@ const weeksData = [
     title: "Semana 1: Fundamentos y Entorno de Desarrollo",
     period: "Semana de Introducción",
     summary: "Configuración del entorno de desarrollo moderno utilizando Node.js, npm y sistemas de control de versiones con Git.",
-    extendedDescription: "En esta primera semana, nos sumergimos en las herramientas esenciales que todo desarrollador moderno debe dominar. Desde la configuración de un entorno de trabajo óptimo con VS Code, extensiones clave, hasta el manejo de terminales y la comprensión profunda de Git para el control de versiones. Aprendimos a crear repositorios, gestionar ramas (branches) y entender el flujo de trabajo colaborativo que utilizan las grandes empresas tecnológicas.",
+    extendedDescription: "En esta primera semana, nos sumergimos en las herramientas esenciales que todo desarrollador moderno debe dominar. Desde la configuración de un entorno de trabajo óptimo con VS Code, extensiones clave, hasta el manejo de terminales y la comprensión profunda de Git para el control de versiones. Aprendimos a crear repositorios, gestionar ramas (branches) y entender el flujo de trabajo colaborativo.",
+    definitions: "Instalación de Node.js como entorno de ejecución JS y npm como gestor de dependencias. Configuración de Git para el control de versiones distribuido que rastrea cambios en código. Inicialización de repositorios locales y conexión remota con GitHub.",
+    procedure: "1. Inicializar repositorio local con git init.\n2. Configurar usuario y email en git config.\n3. Agregar archivos al área de preparación con git add .\n4. Consolidar cambios usando git commit.\n5. Enlazar repositorio de GitHub y subir código mediante git push.",
+    labExercises: "Creación y configuración del espacio de trabajo del proyecto base.",
+    labResults: "Repositorio remoto en GitHub enlazado con la estructura básica de directorios del proyecto sincronizada.",
+    myReflectionWhat: "Aprendí la importancia del control de versiones distribuido y la diferencia clave entre Git (herramienta local) y GitHub (plataforma en la nube).",
+    myReflectionHow: "Lo aprendí ejecutando comandos en la consola, resolviendo conflictos de fusión de ramas y sincronizando repositorios paso a paso.",
     achievements: [
       "Instalación y configuración del entorno local de desarrollo con VS Code y Node.js.",
       "Inicialización de repositorios Git locales y sincronización con GitHub.",
@@ -39,7 +45,13 @@ const weeksData = [
     title: "Semana 2: Estructura y Semántica Web",
     period: "HTML5 & Buenas Prácticas",
     summary: "Creación de la base estructural utilizando HTML5 semántico. Organización de información enfocada en SEO y accesibilidad.",
-    extendedDescription: "Dejamos atrás los clásicos 'divs' para todo y aprendimos a estructurar la web de forma semántica. Usando etiquetas como <header>, <main>, <article>, y <section>, logramos que nuestro código no solo sea legible para nosotros, sino también para los motores de búsqueda (SEO) y lectores de pantalla (Accesibilidad). Un buen cimiento es vital para cualquier sitio web profesional.",
+    extendedDescription: "Dejamos atrás los clásicos 'divs' para todo y aprendimos a estructurar la web de forma semántica. Usando etiquetas como <header>, <main>, <article>, y <section>, logramos que nuestro código sea legible para buscadores y lectores de pantalla.",
+    definitions: "HTML5 Semántico es la práctica de escribir marcado HTML que describe el significado del contenido en lugar de solo su apariencia. Elementos como main, article, section y header ayudan a los navegadores y robots de búsqueda a interpretar el sitio.",
+    procedure: "1. Organizar el documento con <!DOCTYPE html> y etiqueta html.\n2. Estructurar el head con meta tags descriptivos y título.\n3. Segmentar el body con header, nav, main, sections jerárquicas (h1-h6) y footer.",
+    labExercises: "Maquetación semántica estructurada de la web corporativa 'Pastelería Dulzemi'.",
+    labResults: "Un sitio web funcional libre de divitis, que pasa las pruebas de validación de sintaxis W3C y optimización SEO.",
+    myReflectionWhat: "Aprendí que el HTML semántico es vital para que los motores de búsqueda indexen correctamente mi web y para facilitar el uso de lectores de pantalla.",
+    myReflectionHow: "Lo aprendí maquetando el proyecto 'Pastelería Dulzemi', validando el código con el validador oficial del W3C y probando la jerarquía de etiquetas.",
     achievements: [
       "Dominio de etiquetas semánticas de HTML5.",
       "Estructuración de contenido para mejorar la legibilidad y SEO.",
@@ -65,7 +77,13 @@ const weeksData = [
     title: "Semana 3: Diseño Visual y Responsive con CSS3",
     period: "CSS Avanzado & Flexbox / Grid",
     summary: "Estilización adaptativa utilizando CSS3. Implementación de diseño responsivo usando Media Queries, Flexbox y Grid CSS.",
-    extendedDescription: "La web debe verse increíble en cualquier dispositivo. Esta semana dominamos el arte del diseño responsivo. Utilizamos CSS Grid para maquetaciones bidimensionales complejas y Flexbox para alineaciones fluidas. Además, implementamos el diseño 'Mobile-First' y adoptamos variables CSS (Custom Properties) para crear un sistema de diseño escalable y soportar temas oscuros (Dark Mode).",
+    extendedDescription: "La web debe verse increíble en cualquier dispositivo. Esta semana dominamos el arte del diseño responsivo. Utilizamos CSS Grid para maquetaciones bidimensionales complejas y Flexbox para alineaciones fluidas y ordenamiento Mobile-First.",
+    definitions: "Flexbox es un modelo de diseño unidireccional ideal para alinear elementos en fila o columna. CSS Grid es bidimensional, permitiendo alinear elementos en filas y columnas simultáneamente. Media Queries aplican estilos según el tamaño de la pantalla.",
+    procedure: "1. Declarar variables globales en :root.\n2. Construir la estructura móvil básica (Mobile-First).\n3. Aplicar display: grid para la rejilla principal.\n4. Usar @media (min-width) para expandir y reorganizar el diseño en tablets y desktops.",
+    labExercises: "Estilización y adaptabilidad del sitio ecológico 'Alfa Green'.",
+    labResults: "Sitio web totalmente responsivo con transiciones de color mediante variables y adaptado a móviles sin desbordes.",
+    myReflectionWhat: "Aprendí la diferencia práctica de usar CSS Grid para la plantilla general y Flexbox para la alineación de componentes internos del menú.",
+    myReflectionHow: "Lo aprendí experimentando con propiedades de Grid, resolviendo desbordes horizontales y usando las herramientas de desarrollador en modo de simulación móvil.",
     achievements: [
       "Implementación maestra de Flexbox y CSS Grid.",
       "Uso de variables CSS para el manejo dinámico de temas.",
@@ -91,7 +109,13 @@ const weeksData = [
     title: "Semana 4: JavaScript y Lógica Interactiva",
     period: "JavaScript Moderno (ES6+)",
     summary: "Programación en JavaScript nativo para agregar dinamismo e interacción con el usuario en el lado del cliente (DOM Manipulation).",
-    extendedDescription: "¡Le dimos vida a nuestra web! Pasamos de lo estático a lo dinámico utilizando JavaScript moderno (ES6+). Aprendimos a seleccionar y manipular elementos del DOM, escuchar eventos complejos del usuario (scroll, clics, teclado) y manejar asincronía básica. La interactividad es lo que convierte una página web en una verdadera aplicación.",
+    extendedDescription: "Pasamos de páginas estáticas a dinámicas utilizando JavaScript moderno (ES6+). Aprendimos a seleccionar y manipular elementos del DOM, escuchar eventos del usuario (scroll, clics) y cambiar estilos en tiempo real.",
+    definitions: "El DOM (Document Object Model) es una interfaz que representa el documento HTML como un árbol de nodos. JavaScript interactúa con él seleccionando nodos con querySelector y asignando acciones mediante EventListeners.",
+    procedure: "1. Seleccionar elementos del header y del menú con querySelector.\n2. Escuchar el evento scroll de window.\n3. Añadir o remover clases CSS dinámicamente según window.scrollY para cambiar la opacidad de la barra.",
+    labExercises: "Programación de lógica interactiva para menús dinámicos y detector de scroll en 'DESARROLLO-WEB-FIS'.",
+    labResults: "Navbar dinámico que cambia de estilo al desplazarse y menú móvil interactivo que abre y cierra fluidamente.",
+    myReflectionWhat: "Aprendí cómo conectar la lógica de eventos de JS con las clases CSS de transición para lograr animaciones nativas sin recurrir a librerías externas.",
+    myReflectionHow: "Lo aprendí escribiendo funciones en JS, depurando estados con console.log y asociando escuchas de clics a botones de hamburguesa.",
     achievements: [
       "Manejo de variables modernas (let/const) y funciones de flecha (Arrow functions).",
       "Escucha y gestión de eventos avanzados en el DOM.",
@@ -117,7 +141,13 @@ const weeksData = [
     title: "Semana 5: Introducción a React & Componentes",
     period: "Ecosistema de Componentes SPA",
     summary: "Migración de páginas estáticas al framework React para una arquitectura modular, reutilizable y eficiente con Renderización Dinámica.",
-    extendedDescription: "El gran salto hacia el desarrollo frontend moderno. Adoptamos React para convertir nuestro proyecto en una Single Page Application (SPA). Desglosamos la interfaz en componentes reutilizables, aprendimos la sintaxis JSX, y gestionamos el estado de la aplicación utilizando Hooks como \`useState\` y \`useEffect\`. El flujo de datos unidireccional (Props) cambió por completo nuestra forma de pensar.",
+    extendedDescription: "El gran salto hacia el desarrollo frontend moderno. Adoptamos React para convertir nuestro proyecto en una SPA. Desglosamos la interfaz en componentes reutilizables, aprendimos JSX, y gestionamos el estado utilizando Hooks como useState y useEffect.",
+    definitions: "Vite es un empaquetador ultrarrápido para aplicaciones web. React es una librería declarativa basada en componentes. JSX es una extensión de sintaxis que permite escribir marcado similar a HTML dentro de JavaScript. Los hooks controlan el estado y ciclo de vida.",
+    procedure: "1. Configurar un nuevo proyecto React usando npx create-vite.\n2. Descomponer el maquetado en componentes reutilizables como Navbar, Sidebar, Card.\n3. Inicializar variables de estado con useState y sincronizar efectos de carga con useEffect.",
+    labExercises: "Migración estructural y de estados interactivos de 'Chifa Richi' a React SPA.",
+    labResults: "Panel de administración modularizado en componentes interactivos con actualización de estados en tiempo real sin recargas de página.",
+    myReflectionWhat: "Aprendí a estructurar aplicaciones con el paradigma declarativo de React, pasando datos unidireccionalmente a través de props.",
+    myReflectionHow: "Lo aprendí instalando dependencias con npm, configurando componentes funcionales y depurando el estado con las React Developer Tools.",
     achievements: [
       "Creación de componentes funcionales e interactivos en React con JSX.",
       "Uso de React Hooks fundamentales (useState, useEffect) para lógica de estado.",
@@ -143,7 +173,13 @@ const weeksData = [
     title: "Semana 6: Animaciones Fluidas con Framer Motion",
     period: "Micro-interacciones y UI Animada",
     summary: "Estudio e implementación de animaciones avanzadas para mejorar la experiencia de usuario y dar vida a los componentes mediante físicas de resorte.",
-    extendedDescription: "Una buena UI debe sentirse viva y responder al usuario de forma orgánica. Con la introducción de \`framer-motion\`, llevamos nuestras animaciones al siguiente nivel. Reemplazamos transiciones CSS rígidas por animaciones basadas en físicas de resortes (spring physics). Implementamos animaciones condicionadas al scroll (\`whileInView\`), efectos hover, y controlamos el montaje/desmontaje de componentes usando \`AnimatePresence\`.",
+    extendedDescription: "Con la introducción de framer-motion, llevamos nuestras animaciones al siguiente nivel. Reemplazamos transiciones CSS por animaciones basadas en físicas de resortes (spring physics), animaciones condicionadas al scroll (whileInView) y AnimatePresence.",
+    definitions: "Framer Motion es una librería de animación para React. Utiliza físicas de resortes en lugar de curvas de tiempo para lograr transiciones naturales. AnimatePresence permite animar componentes cuando se desmontan del árbol de React.",
+    procedure: "1. Instalar framer-motion vía npm.\n2. Reemplazar elementos estándar por componentes motion (ej. motion.div).\n3. Configurar variantes de animación con estados inicial, animado y transiciones específicas.",
+    labExercises: "Integración de micro-interacciones dinámicas y transiciones de carga en 'Web Orion'.",
+    labResults: "Tarjetas y menús interactivos con animaciones fluidas basadas en resortes y orquestación de entrada escalonada.",
+    myReflectionWhat: "Aprendí a usar la propiedad whileInView de Framer Motion para disparar animaciones controladas por el scroll del usuario de manera fluida.",
+    myReflectionHow: "Lo aprendí implementando motion.div en cards, ajustando los valores de dureza (stiffness) y amortiguamiento (damping) para calibrar los resortes.",
     achievements: [
       "Implementación de transiciones de entrada orquestadas (Stagger children).",
       "Configuración de micro-interacciones hover y tap con resortes.",
@@ -169,7 +205,13 @@ const weeksData = [
     title: "Semana 7: Gráficos 3D en la Web",
     period: "Three.js & React Three Fiber",
     summary: "Creación de experiencias inmersivas 3D embebidas directamente en el navegador mediante WebGL, Three.js y React Three Fiber.",
-    extendedDescription: "Rompimos la barrera del 2D. En esta semana, exploramos el poder de WebGL a través de \`Three.js\` y su contraparte de React, \`@react-three/fiber\`. Aprendimos sobre mallas (meshes), geometrías, materiales, luces y cámaras. Construimos entornos 3D interactivos, integramos modelos y programamos lógicas de renderizado frame por frame (\`useFrame\`), lo que nos permitió construir este mismo portafolio 3D interactivo en el que puedes conducir un auto.",
+    extendedDescription: "Rompimos la barrera del 2D. Exploramos el poder de WebGL a través de Three.js y @react-three/fiber. Aprendimos sobre meshes, geometrías, materiales, luces y cámaras, desarrollando un portafolio interactivo 3D con un vehículo navegable.",
+    definitions: "WebGL es una API de bajo nivel para renderizar gráficos 3D en el canvas HTML5. Three.js es una librería que simplifica WebGL. React Three Fiber es un reconciliador de React para Three.js que permite estructurar la escena en componentes.",
+    procedure: "1. Configurar un Canvas 3D de R3F.\n2. Agregar luces direccionales y ambientales en el árbol de componentes.\n3. Instanciar geometrías primitivas y aplicar materiales.\n4. Implementar hook useFrame para actualizar posiciones y rotaciones de cámara frame a frame.",
+    labExercises: "Maquetación e implementación de un minijuego 3D interactivo con físicas básicas de conducción en 'Práctica 07'.",
+    labResults: "Entorno 3D interactivo renderizado a 60fps con cámara seguidora que permite al usuario estacionar sobre zonas activas.",
+    myReflectionWhat: "Aprendí a integrar el motor 3D en la interfaz declarativa de React, vinculando las interacciones del teclado con las coordenadas espaciales del auto.",
+    myReflectionHow: "Lo aprendí programando mallas personalizadas, depurando la posición de la cámara seguidora en el bucle useFrame y testeando controles.",
     achievements: [
       "Configuración de escenas 3D, cámaras y luces espaciales (Ambient, Point, Directional).",
       "Creación e instanciación de geometrías primitivas y personalizadas.",
@@ -195,7 +237,13 @@ const weeksData = [
     title: "Semana 8: Integración Final y Portafolio",
     period: "Optimización y Deployment Listo",
     summary: "Fusión de todos los conceptos aprendidos en un portal consolidado y optimizado. Control de layouts y preparación para producción.",
-    extendedDescription: "La recta final. Después de semanas de intenso aprendizaje, dedicamos esta fase a unir todas las piezas: HTML semántico, CSS responsivo, interactividad JS, React, animaciones Framer y 3D. Nos enfocamos en la arquitectura final del proyecto, optimización de assets, refactorización de código limpio, y la compilación de producción con Vite para garantizar tiempos de carga rápidos. Todo culminó en el despliegue del proyecto a la web.",
+    extendedDescription: "Dedicamos esta fase a unir todas las piezas: HTML semántico, CSS responsivo, interactividad JS, React, animaciones Framer y 3D, optimizando bundles y compilando para producción.",
+    definitions: "La optimización de bundles consiste en reducir el tamaño de los scripts de JS generados. Vite compila y minifica usando Rollup. El deploy es el proceso de publicar los archivos de distribución en un hosting web.",
+    procedure: "1. Ejecutar npm run build para empaquetar y minificar el código.\n2. Validar el rendimiento del bundle localmente con npm run preview.\n3. Configurar scripts de despliegue automatizados para publicar en GitHub Pages usando la dependencia gh-pages.",
+    labExercises: "Consolidación general y despliegue del Portafolio ADAT MARC en la plataforma GitHub Pages.",
+    labResults: "Portafolio electrónico unificado, responsivo y de alto rendimiento cargando correctamente desde un servidor público.",
+    myReflectionWhat: "Aprendí el ciclo completo de empaquetado de software moderno y a solucionar problemas de rutas relativas para el alojamiento de recursos estáticos.",
+    myReflectionHow: "Lo aprendí solucionando advertencias de tamaño de bundle en Vite y ejecutando el flujo de publicación con comandos de consola.",
     achievements: [
       "Consolidación de componentes en una única SPA fluida.",
       "Optimización de bundles y manejo de assets estáticos (imágenes, fuentes).",
@@ -222,6 +270,14 @@ const teamMember = {
   name: "David Angel Toribio Anselmo",
   role: "Desarrollador Full Stack & UI/UX",
   bio: "Estudiante apasionado de la ingeniería de software y desarrollo web. Me especializo en crear interfaces web hermosas, dinámicas y altamente interactivas usando herramientas modernas como React, CSS avanzado, Framer Motion y gráficos web en 3D.",
+  education: [
+    { degree: "Estudiante de Ingeniería de Sistemas", institution: "Universidad Nacional del Centro del Perú (UNCP)", period: "2022 - Presente" },
+    { degree: "Desarrollo Frontend Moderno & Web 3D", institution: "Especialización Autónoma / Cursos en línea", period: "2024 - 2026" }
+  ],
+  experience: [
+    { position: "Desarrollador Frontend Freelance", company: "Proyectos Independientes", period: "2025 - Presente", desc: "Diseño y desarrollo de sitios web corporativos utilizando React, Vite, Framer Motion y Three.js." },
+    { position: "Desarrollador de Aplicaciones de Laboratorio", company: "Cátedra de Desarrollo Web UNCP", period: "2025", desc: "Implementación de dashboards, maquetaciones adaptativas Mobile-First, y simulaciones 3D interactivas." }
+  ],
   stats: [
     { label: "Proyectos Completados", value: "12+", icon: CheckCircle },
     { label: "Implementaciones", value: "10+", icon: Wrench },
@@ -237,6 +293,59 @@ const teamMember = {
     { name: "Diseño Web Responsivo & UX/UI", level: 93 }
   ]
 };
+
+const projectsConcluidos = [
+  {
+    title: "Pastelería Dulzemi",
+    description: "Sitio web de pastelería con maquetación semántica estructurada, metadatos optimizados para SEO y accesibilidad completa.",
+    tools: ["HTML5", "SEO", "Semantic Markup"],
+    link: "https://github.com/Adat13/Dulzemi",
+    category: "Semana 2"
+  },
+  {
+    title: "Alfa Green",
+    description: "Plataforma web con diseño adaptable Mobile-First utilizando CSS Grid y Flexbox avanzado para un impacto visual moderno.",
+    tools: ["CSS3 Flexbox", "CSS Grid", "Responsive Design"],
+    link: "https://github.com/Adat13/alfa-green",
+    category: "Semana 3"
+  },
+  {
+    title: "DESARROLLO-WEB-FIS",
+    description: "Laboratorio interactivo y manipulaciones avanzadas de DOM para el registro y gestión de datos académicos.",
+    tools: ["JavaScript ES6+", "DOM Manipulation", "EventListeners"],
+    link: "https://github.com/Adat13/DESARROLLO-WEB-FIS",
+    category: "Semana 4"
+  },
+  {
+    title: "Dashboard Chifa Richi",
+    description: "Panel de administración interactivo desarrollado en React 18 con manejo de estados, componentes reutilizables y props dinámicas.",
+    tools: ["React 18+", "Vite", "useState / useEffect"],
+    link: "https://github.com/Adat13/chifa-richi",
+    category: "Semana 5"
+  },
+  {
+    title: "Web Orion",
+    description: "Portal moderno con micro-interacciones suaves y animaciones de física de resorte mediante Framer Motion.",
+    tools: ["Framer Motion", "Spring Physics", "React"],
+    link: "https://github.com/Adat13/WebOrion",
+    category: "Semana 6"
+  },
+  {
+    title: "Auto 3D Simulator (Práctica 07)",
+    description: "Entorno interactivo 3D con físicas básicas de conducción de un vehículo, iluminación de alta gama y WebGL.",
+    tools: ["Three.js", "React Three Fiber", "@react-three/drei"],
+    link: "https://github.com/Adat13/PRACTICA_07",
+    category: "Semana 7"
+  },
+  {
+    title: "Portafolio ADAT MARC",
+    description: "Este mismo portafolio integrado con la landing page de ADAT MARC, optimizado para alto rendimiento y desplegado en GitHub Pages.",
+    tools: ["Vite Build", "React", "Deployment"],
+    link: "https://github.com/Adat13/adat-marc-landing",
+    category: "Semana 8"
+  }
+];
+
 
 // Framer Motion Variants for Staggered list entries on Scroll
 const containerVariants = {
@@ -306,7 +415,7 @@ const TeamPortfolio = () => {
             <span className="week-detail-period"><Calendar size={16} /> {week.period}</span>
           </div>
 
-          <p className="week-detail-desc" style={{ fontSize: '1.1rem', fontWeight: 600, color: '#e0e0e0', marginBottom: '1rem' }}>
+          <p className="week-detail-desc" style={{ fontSize: '1.1rem', fontWeight: 600, color: '#e0e0e0', marginBottom: '1.5rem' }}>
             {week.summary}
           </p>
           
@@ -314,15 +423,47 @@ const TeamPortfolio = () => {
             {week.extendedDescription}
           </p>
 
-          <div style={{ background: 'rgba(255,255,255,0.01)', border: '1px solid var(--glass-border)', padding: '1.2rem', borderRadius: '12px', marginBottom: '2rem' }}>
-            <h5 style={{ color: '#fff', fontSize: '0.95rem', display: 'flex', alignItems: 'center', gap: '0.5rem', marginBottom: '0.5rem' }}>
-              <CheckCircle size={16} style={{ color: week.color }} /> Entregable Principal:
-            </h5>
-            <p style={{ color: 'var(--text-dim)', fontSize: '0.9rem', margin: 0 }}>{week.deliverable}</p>
+          {/* 1. Temas Aprendidos (Definiciones) */}
+          <div style={{ background: 'rgba(255,255,255,0.01)', border: '1px solid var(--glass-border)', padding: '1.5rem', borderRadius: '16px', marginBottom: '1.5rem' }}>
+            <h4 style={{ color: week.color, fontSize: '1.05rem', fontWeight: 700, display: 'flex', alignItems: 'center', gap: '0.5rem', marginBottom: '0.8rem' }}>
+              <BookOpen size={18} /> Temas Aprendidos (Definiciones)
+            </h4>
+            <p style={{ color: 'var(--text-dim)', fontSize: '0.9rem', lineHeight: '1.7', margin: 0 }}>
+              {week.definitions}
+            </p>
           </div>
 
-          <div className="week-achievements">
-            <h4><Award size={18} style={{ color: week.color }} /> Puntos Clave Aprendidos:</h4>
+          {/* 2. Procedimiento Realizado */}
+          <div style={{ background: 'rgba(255,255,255,0.01)', border: '1px solid var(--glass-border)', padding: '1.5rem', borderRadius: '16px', marginBottom: '1.5rem' }}>
+            <h4 style={{ color: '#fff', fontSize: '1.05rem', fontWeight: 700, display: 'flex', alignItems: 'center', gap: '0.5rem', marginBottom: '0.8rem' }}>
+              <Wrench size={18} style={{ color: week.color }} /> Procedimiento Realizado
+            </h4>
+            <p style={{ color: 'var(--text-dim)', fontSize: '0.9rem', lineHeight: '1.7', margin: 0, whiteSpace: 'pre-line' }}>
+              {week.procedure}
+            </p>
+          </div>
+
+          {/* 3. Ejercicios de Laboratorio y Resultados */}
+          <div style={{ background: 'rgba(255,255,255,0.01)', border: '1px solid var(--glass-border)', padding: '1.5rem', borderRadius: '16px', marginBottom: '2rem' }}>
+            <h4 style={{ color: '#fff', fontSize: '1.05rem', fontWeight: 700, display: 'flex', alignItems: 'center', gap: '0.5rem', marginBottom: '0.8rem' }}>
+              <CheckCircle size={18} style={{ color: week.color }} /> Ejercicio de Laboratorio y Resultados
+            </h4>
+            <div style={{ display: 'flex', flexDirection: 'column', gap: '0.6rem' }}>
+              <p style={{ color: '#fff', fontSize: '0.9rem', margin: 0, fontWeight: 700 }}>
+                Ejercicio: <span style={{ color: 'var(--text-dim)', fontWeight: 400 }}>{week.labExercises}</span>
+              </p>
+              <p style={{ color: '#fff', fontSize: '0.9rem', margin: 0, fontWeight: 700 }}>
+                Resultado: <span style={{ color: 'var(--text-dim)', fontWeight: 400 }}>{week.labResults}</span>
+              </p>
+              <p style={{ color: '#fff', fontSize: '0.9rem', margin: 0, fontWeight: 700 }}>
+                Entregable: <span style={{ color: 'var(--text-dim)', fontWeight: 400 }}>{week.deliverable}</span>
+              </p>
+            </div>
+          </div>
+
+          {/* 4. Puntos Clave Aprendidos */}
+          <div className="week-achievements" style={{ marginBottom: '2rem' }}>
+            <h4 style={{ fontSize: '1.05rem' }}><Award size={18} style={{ color: week.color }} /> Hitos de Aprendizaje:</h4>
             <ul>
               {week.achievements.map((achievement, idx) => (
                 <motion.li 
@@ -337,47 +478,27 @@ const TeamPortfolio = () => {
             </ul>
           </div>
 
-          {/* Mis Apuntes y Reflexión */}
-          {week.myNotes && (
-            <motion.div
-              initial={{ opacity: 0, y: 10 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: 0.3 }}
-              style={{ marginTop: '2rem', display: 'flex', flexDirection: 'column', gap: '1rem' }}
-            >
-              {/* Apuntes */}
-              <div style={{
-                background: `${week.color}0d`,
-                border: `1px solid ${week.color}33`,
-                borderLeft: `4px solid ${week.color}`,
-                borderRadius: '12px',
-                padding: '1.2rem',
-              }}>
-                <h5 style={{ color: week.color, fontSize: '0.9rem', fontWeight: 700, marginBottom: '0.6rem', display: 'flex', alignItems: 'center', gap: '0.4rem' }}>
-                  <BookOpen size={15} /> Mis Apuntes
-                </h5>
-                <p style={{ color: 'var(--text-dim)', fontSize: '0.9rem', lineHeight: '1.7', margin: 0 }}>
-                  {week.myNotes}
-                </p>
-              </div>
-
-              {/* Reflexión */}
-              <div style={{
-                background: 'rgba(112, 0, 255, 0.07)',
-                border: '1px solid rgba(112, 0, 255, 0.25)',
-                borderLeft: '4px solid var(--secondary)',
-                borderRadius: '12px',
-                padding: '1.2rem',
-              }}>
-                <h5 style={{ color: 'var(--secondary)', fontSize: '0.9rem', fontWeight: 700, marginBottom: '0.6rem', display: 'flex', alignItems: 'center', gap: '0.4rem' }}>
-                  <Star size={15} /> Mi Reflexión
-                </h5>
-                <p style={{ color: 'var(--text-dim)', fontSize: '0.9rem', lineHeight: '1.7', margin: 0, fontStyle: 'italic' }}>
-                  "{week.myReflection}"
-                </p>
-              </div>
-            </motion.div>
-          )}
+          {/* 5. Reflexión Académica Metacognitiva */}
+          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(240px, 1fr))', gap: '1.2rem', marginBottom: '2rem' }}>
+            {/* ¿Qué aprendió? */}
+            <div style={{ background: 'rgba(0, 245, 255, 0.03)', border: '1px solid rgba(0, 245, 255, 0.1)', borderLeft: `4px solid var(--primary)`, padding: '1.2rem', borderRadius: '12px' }}>
+              <h5 style={{ color: 'var(--primary)', fontSize: '0.9rem', fontWeight: 700, marginBottom: '0.5rem', display: 'flex', alignItems: 'center', gap: '0.4rem' }}>
+                <Star size={15} /> ¿Qué aprendió?
+              </h5>
+              <p style={{ color: 'var(--text-dim)', fontSize: '0.85rem', lineHeight: '1.6', margin: 0 }}>
+                {week.myReflectionWhat}
+              </p>
+            </div>
+            {/* ¿Cómo aprendió? */}
+            <div style={{ background: 'rgba(112, 0, 255, 0.03)', border: '1px solid rgba(112, 0, 255, 0.1)', borderLeft: `4px solid var(--secondary)`, padding: '1.2rem', borderRadius: '12px' }}>
+              <h5 style={{ color: 'var(--secondary)', fontSize: '0.9rem', fontWeight: 700, marginBottom: '0.5rem', display: 'flex', alignItems: 'center', gap: '0.4rem' }}>
+                <Coffee size={15} /> ¿Cómo aprendió?
+              </h5>
+              <p style={{ color: 'var(--text-dim)', fontSize: '0.85rem', lineHeight: '1.6', margin: 0 }}>
+                {week.myReflectionHow}
+              </p>
+            </div>
+          </div>
 
           <div style={{ marginTop: '2.5rem' }}>
             <h4 style={{ fontSize: '1rem', color: '#fff', marginBottom: '1rem', display: 'flex', alignItems: 'center', gap: '0.5rem' }}>
@@ -545,7 +666,99 @@ const TeamPortfolio = () => {
             ))}
           </div>
         </div>
+
+        {/* Estudios y Experiencia */}
+        <div className="education-experience-section" style={{ marginTop: '3rem', borderTop: '1px solid var(--glass-border)', paddingTop: '2.5rem' }}>
+          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))', gap: '2.5rem' }}>
+            
+            {/* Column 1: Educación */}
+            <div>
+              <h3 className="section-title-sm" style={{ marginBottom: '1.5rem', display: 'flex', alignItems: 'center', gap: '0.5rem' }}>
+                <BookOpen size={20} style={{ color: 'var(--primary)' }} /> Estudios y Educación
+              </h3>
+              <div style={{ display: 'flex', flexDirection: 'column', gap: '1.5rem' }}>
+                {teamMember.education.map((edu, idx) => (
+                  <div key={idx} style={{ position: 'relative', paddingLeft: '1.5rem', borderLeft: '2px solid rgba(0, 245, 255, 0.2)' }}>
+                    <div style={{ position: 'absolute', left: '-5px', top: '6px', width: '8px', height: '8px', borderRadius: '50%', background: 'var(--primary)' }}></div>
+                    <span style={{ fontSize: '0.8rem', color: 'var(--primary)', fontWeight: 700 }}>{edu.period}</span>
+                    <h5 style={{ color: '#fff', fontSize: '0.95rem', fontWeight: 700, margin: '0.2rem 0' }}>{edu.degree}</h5>
+                    <p style={{ color: 'var(--text-dim)', fontSize: '0.85rem', margin: 0 }}>{edu.institution}</p>
+                  </div>
+                ))}
+              </div>
+            </div>
+
+            {/* Column 2: Experiencia */}
+            <div>
+              <h3 className="section-title-sm" style={{ marginBottom: '1.5rem', display: 'flex', alignItems: 'center', gap: '0.5rem' }}>
+                <Wrench size={20} style={{ color: 'var(--secondary)' }} /> Experiencia y Práctica
+              </h3>
+              <div style={{ display: 'flex', flexDirection: 'column', gap: '1.5rem' }}>
+                {teamMember.experience.map((exp, idx) => (
+                  <div key={idx} style={{ position: 'relative', paddingLeft: '1.5rem', borderLeft: '2px solid rgba(112, 0, 255, 0.2)' }}>
+                    <div style={{ position: 'absolute', left: '-5px', top: '6px', width: '8px', height: '8px', borderRadius: '50%', background: 'var(--secondary)' }}></div>
+                    <span style={{ fontSize: '0.8rem', color: 'var(--secondary)', fontWeight: 700 }}>{exp.period}</span>
+                    <h5 style={{ color: '#fff', fontSize: '0.95rem', fontWeight: 700, margin: '0.2rem 0' }}>{exp.position}</h5>
+                    <p style={{ color: 'var(--text-dim)', fontSize: '0.85rem', fontWeight: 600, marginBottom: '0.3rem' }}>{exp.company}</p>
+                    <p style={{ color: 'var(--text-dim)', fontSize: '0.85rem', margin: 0, lineHeight: '1.5' }}>{exp.desc}</p>
+                  </div>
+                ))}
+              </div>
+            </div>
+
+          </div>
+        </div>
       </motion.div>
+
+      {/* Proyectos Concluidos */}
+      <div className="projects-concluidos-section" style={{ marginTop: '6rem', marginBottom: '6rem' }}>
+        <div className="section-header-centered">
+          <span className="badge">Proyectos Concluidos</span>
+          <h2 className="section-title">Portafolio de <span className="text-gradient">Aplicaciones Reales</span></h2>
+          <p className="section-subtitle">
+            Proyectos funcionales desarrollados a lo largo de las sesiones del curso, aplicando maquetación responsiva, lógica dinámica y entornos 3D.
+          </p>
+        </div>
+
+        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))', gap: '2rem' }}>
+          {projectsConcluidos.map((project, idx) => (
+            <motion.div 
+              key={idx}
+              className="week-card glassmorphism"
+              whileHover={{ y: -8, scale: 1.02, borderColor: 'rgba(0, 245, 255, 0.3)' }}
+              transition={{ type: "spring", stiffness: 150 }}
+              style={{ display: 'flex', flexDirection: 'column', height: '100%', padding: '1.8rem', borderTop: '4px solid var(--primary)' }}
+            >
+              <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '1rem' }}>
+                <span className="badge" style={{ margin: 0, padding: '0.2rem 0.6rem', fontSize: '0.75rem', background: 'rgba(0,245,255,0.1)', color: 'var(--primary)', border: '1px solid rgba(0,245,255,0.2)' }}>
+                  {project.category}
+                </span>
+                <Code2 size={20} style={{ color: 'var(--primary)' }} />
+              </div>
+              <h3 style={{ color: '#fff', fontSize: '1.25rem', fontWeight: 800, marginBottom: '0.8rem' }}>{project.title}</h3>
+              <p style={{ color: 'var(--text-dim)', fontSize: '0.9rem', lineHeight: '1.6', marginBottom: '1.5rem', flexGrow: 1 }}>{project.description}</p>
+              
+              <div style={{ display: 'flex', flexWrap: 'wrap', gap: '0.4rem', marginBottom: '1.5rem' }}>
+                {project.tools.map((tool, tIdx) => (
+                  <span key={tIdx} style={{ fontSize: '0.7rem', padding: '0.2rem 0.5rem', background: 'rgba(255,255,255,0.03)', border: '1px solid var(--glass-border)', borderRadius: '4px', color: 'var(--text-dim)' }}>
+                    {tool}
+                  </span>
+                ))}
+              </div>
+
+              <a 
+                href={project.link} 
+                target="_blank" 
+                rel="noopener noreferrer" 
+                className="btn btn-outline-light d-flex align-items-center justify-content-center gap-2"
+                style={{ fontSize: '0.85rem', padding: '0.5rem 1rem', borderRadius: '8px', border: '1px solid var(--glass-border)' }}
+              >
+                Ver Repositorio <ExternalLink size={14} />
+              </a>
+            </motion.div>
+          ))}
+        </div>
+      </div>
 
       {/* Bitácora de Clases Semanales */}
       <div className="weeks-section-container" id="week-details-anchor">
@@ -704,6 +917,116 @@ const TeamPortfolio = () => {
             )}
           </AnimatePresence>
         )}
+      </div>
+
+      {/* Reflexión Final */}
+      <div className="reflexion-final-section" style={{ marginTop: '8rem', borderTop: '1px solid var(--glass-border)', paddingTop: '5rem' }}>
+        <div className="section-header-centered">
+          <span className="badge">Meta-evaluación</span>
+          <h2 className="section-title">Reflexión Final <span className="text-gradient">del Curso</span></h2>
+          <p className="section-subtitle">
+            Un análisis metacognitivo sobre el progreso personal, los retos superados y los conocimientos integrados durante el semestre.
+          </p>
+        </div>
+
+        <div className="glassmorphism" style={{ padding: '3rem', borderRadius: '24px', position: 'relative', overflow: 'hidden' }}>
+          <div style={{ position: 'absolute', top: '-100px', left: '-100px', width: '200px', height: '200px', background: 'radial-gradient(circle, var(--secondary-glow) 0%, transparent 70%)', opacity: 0.5, pointerEvents: 'none' }}></div>
+          
+          <div className="reflexion-grid">
+            <div>
+              <p style={{ fontSize: '1.1rem', color: '#fff', fontWeight: 600, lineHeight: '1.7', marginBottom: '1.5rem' }}>
+                "El camino del desarrollo web no es aprender líneas de código de memoria, sino comprender cómo se integran las tecnologías para resolver problemas reales del usuario."
+              </p>
+              <p style={{ color: 'var(--text-dim)', fontSize: '0.95rem', lineHeight: '1.8', marginBottom: '1.5rem' }}>
+                A lo largo de este curso, he transitado por un camino que transformó mi perspectiva sobre el desarrollo frontend. Comencé aprendiendo a organizar código de manera profesional con Git y VS Code. Posteriormente, la transición hacia HTML5 semántico me enseñó a valorar la accesibilidad y el impacto en motores de búsqueda (SEO). Con CSS3 y el diseño Mobile-First, comprendí que una web no es verdaderamente útil si no es adaptable y fluida en pantallas pequeñas como celulares.
+              </p>
+              <p style={{ color: 'var(--text-dim)', fontSize: '0.95rem', lineHeight: '1.8', margin: 0 }}>
+                El gran salto ocurrió al dotar de interactividad al sitio mediante manipulación de DOM con JavaScript, abriendo las puertas al desarrollo con React 18, donde la modularidad y el estado reactivo redefinieron mi forma de programar. Finalmente, la integración de micro-interacciones mediante Framer Motion y experiencias inmersivas tridimensionales con Three.js (React Three Fiber) me demostraron que la web moderna no tiene límites.
+              </p>
+            </div>
+
+            <div style={{ display: 'flex', flexDirection: 'column', gap: '1.5rem' }}>
+              <div style={{ background: 'rgba(0, 245, 255, 0.03)', border: '1px solid rgba(0, 245, 255, 0.1)', borderLeft: '4px solid var(--primary)', padding: '1.5rem', borderRadius: '16px' }}>
+                <h4 style={{ color: 'var(--primary)', fontSize: '1.05rem', fontWeight: 700, marginBottom: '0.8rem', display: 'flex', alignItems: 'center', gap: '0.5rem' }}>
+                  <Star size={16} /> ¿Qué aprendió?
+                </h4>
+                <p style={{ color: 'var(--text-dim)', fontSize: '0.9rem', lineHeight: '1.6', margin: 0 }}>
+                  Aprendí no solo tecnologías de punta (React, Three.js, Framer Motion), sino también la importancia de la arquitectura limpia, el rendimiento web y el diseño Mobile-First enfocado en el usuario final.
+                </p>
+              </div>
+
+              <div style={{ background: 'rgba(112, 0, 255, 0.03)', border: '1px solid rgba(112, 0, 255, 0.1)', borderLeft: '4px solid var(--secondary)', padding: '1.5rem', borderRadius: '16px' }}>
+                <h4 style={{ color: 'var(--secondary)', fontSize: '1.05rem', fontWeight: 700, marginBottom: '0.8rem', display: 'flex', alignItems: 'center', gap: '0.5rem' }}>
+                  <Coffee size={16} /> ¿Cómo aprendió?
+                </h4>
+                <p style={{ color: 'var(--text-dim)', fontSize: '0.9rem', lineHeight: '1.6', margin: 0 }}>
+                  Mi aprendizaje fue 100% práctico. Cada semana se consolidó con laboratorios y entregables reales (Dulzemi, Alfa Green, Chifa Richi, etc.), enfrentándome a la depuración de errores, a la optimización de código y al despliegue real en producción en servidores como GitHub Pages.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      {/* Bibliografía */}
+      <div className="bibliografia-section" style={{ marginTop: '6rem', marginBottom: '2rem' }}>
+        <div className="section-header-centered">
+          <span className="badge">Fuentes Académicas</span>
+          <h2 className="section-title">Referencias y <span className="text-gradient">Bibliografía</span></h2>
+          <p className="section-subtitle">
+            Libros de texto, especificaciones estándar y guías oficiales utilizadas en la investigación y desarrollo de los proyectos.
+          </p>
+        </div>
+
+        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))', gap: '2rem' }}>
+          {/* Libros */}
+          <div className="week-card glassmorphism" style={{ padding: '2rem', borderTop: '4px solid var(--primary)' }}>
+            <h3 style={{ color: '#fff', fontSize: '1.15rem', fontWeight: 800, marginBottom: '1.5rem', display: 'flex', alignItems: 'center', gap: '0.5rem' }}>
+              <BookOpen size={18} style={{ color: 'var(--primary)' }} /> Libros Clave de Referencia
+            </h3>
+            <ul style={{ display: 'flex', flexDirection: 'column', gap: '1.2rem', listStyle: 'none', padding: 0, margin: 0 }}>
+              <li style={{ borderBottom: '1px solid rgba(255,255,255,0.05)', paddingBottom: '0.8rem' }}>
+                <p style={{ color: '#fff', fontSize: '0.9rem', fontWeight: 600, margin: '0 0 0.2rem' }}>HTML and CSS: Design and Build Websites</p>
+                <p style={{ color: 'var(--text-dim)', fontSize: '0.8rem', margin: 0 }}>Duckett, J. (2011). John Wiley & Sons.</p>
+              </li>
+              <li style={{ borderBottom: '1px solid rgba(255,255,255,0.05)', paddingBottom: '0.8rem' }}>
+                <p style={{ color: '#fff', fontSize: '0.9rem', fontWeight: 600, margin: '0 0 0.2rem' }}>Eloquent JavaScript: A Modern Introduction</p>
+                <p style={{ color: 'var(--text-dim)', fontSize: '0.8rem', margin: 0 }}>Haverbeke, M. (2018). No Starch Press (3rd ed).</p>
+              </li>
+              <li>
+                <p style={{ color: '#fff', fontSize: '0.9rem', fontWeight: 600, margin: '0 0 0.2rem' }}>JavaScript: The Definitive Guide</p>
+                <p style={{ color: 'var(--text-dim)', fontSize: '0.8rem', margin: 0 }}>Flanagan, D. (2020). O'Reilly Media (7th ed).</p>
+              </li>
+            </ul>
+          </div>
+
+          {/* Documentaciones */}
+          <div className="week-card glassmorphism" style={{ padding: '2rem', borderTop: '4px solid var(--secondary)' }}>
+            <h3 style={{ color: '#fff', fontSize: '1.15rem', fontWeight: 800, marginBottom: '1.5rem', display: 'flex', alignItems: 'center', gap: '0.5rem' }}>
+              <Globe size={18} style={{ color: 'var(--secondary)' }} /> Documentaciones y Sitios Oficiales
+            </h3>
+            <ul style={{ display: 'flex', flexDirection: 'column', gap: '1.2rem', listStyle: 'none', padding: 0, margin: 0 }}>
+              <li style={{ borderBottom: '1px solid rgba(255,255,255,0.05)', paddingBottom: '0.8rem' }}>
+                <p style={{ color: '#fff', fontSize: '0.9rem', fontWeight: 600, margin: '0 0 0.2rem' }}>MDN Web Docs</p>
+                <a href="https://developer.mozilla.org" target="_blank" rel="noopener noreferrer" style={{ color: 'var(--primary)', fontSize: '0.8rem', textDecoration: 'none', display: 'flex', alignItems: 'center', gap: '0.3rem' }}>
+                  https://developer.mozilla.org <ExternalLink size={12} />
+                </a>
+              </li>
+              <li style={{ borderBottom: '1px solid rgba(255,255,255,0.05)', paddingBottom: '0.8rem' }}>
+                <p style={{ color: '#fff', fontSize: '0.9rem', fontWeight: 600, margin: '0 0 0.2rem' }}>React Documentation</p>
+                <a href="https://react.dev" target="_blank" rel="noopener noreferrer" style={{ color: 'var(--primary)', fontSize: '0.8rem', textDecoration: 'none', display: 'flex', alignItems: 'center', gap: '0.3rem' }}>
+                  https://react.dev <ExternalLink size={12} />
+                </a>
+              </li>
+              <li>
+                <p style={{ color: '#fff', fontSize: '0.9rem', fontWeight: 600, margin: '0 0 0.2rem' }}>Three.js Docs & Examples</p>
+                <a href="https://threejs.org" target="_blank" rel="noopener noreferrer" style={{ color: 'var(--primary)', fontSize: '0.8rem', textDecoration: 'none', display: 'flex', alignItems: 'center', gap: '0.3rem' }}>
+                  https://threejs.org <ExternalLink size={12} />
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
       </div>
     </section>
   );

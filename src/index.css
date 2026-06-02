@@ -1553,4 +1553,23 @@ kbd {
   }
 }
 
+/* Reflexión Final Section Grid */
+.reflexion-grid {
+  display: grid;
+  grid-template-columns: 1.2fr 1fr;
+  gap: 3rem;
+  align-items: center;
+}
+
+@media (max-width: 968px) {
+  .reflexion-grid {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+  .reflexion-final-section .glassmorphism {
+    padding: 1.5rem !important;
+  }
+}
+
+
 
