@@ -49,7 +49,7 @@ function App() {
       <header id="header" className="fixed-top" style={{ background: 'rgba(10, 13, 20, 0.85)', backdropFilter: 'blur(10px)', borderBottom: '1px solid rgba(255,255,255,0.05)', padding: '15px 0', zIndex: 999 }}>
         <div className="container d-flex align-items-center justify-content-between">
           <a href="/" className="logo d-flex align-items-center text-decoration-none">
-            <img src="/AdatLogo.svg" alt="ADAT Logo" style={{ height: '45px', filter: 'drop-shadow(0 0 8px rgba(0,245,255,0.4))' }} />
+            <img src="./AdatLogo.svg" alt="ADAT Logo" style={{ height: '45px', filter: 'drop-shadow(0 0 8px rgba(0,245,255,0.4))' }} />
           </a>
           
           <nav id="navmenu" className="d-none d-lg-block">
