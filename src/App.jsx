@@ -15,7 +15,7 @@ function App() {
     "EVOLUCIONA. IMPLEMENTA. LIDERA."
   ];
   const slogans = [
-    "Tecnología que impulsa tu empresa.",
+    "Tecnología que impulsa tus proyectos.",
     "Hardware y Software a tu medida.",
     "Soluciones digitales para tu crecimiento.",
     "Innovación que transforma negocios."
@@ -55,7 +55,7 @@ function App() {
           <nav id="navmenu" className="d-none d-lg-block">
             <ul className="d-flex list-unstyled m-0 gap-4" style={{ fontWeight: 600, fontSize: '14px' }}>
               <li><a href="#hero" className="text-decoration-none" style={{ color: 'var(--primary)' }}>Inicio</a></li>
-              <li><a href="#about" className="text-decoration-none text-light">NOSOTROS</a></li>
+              <li><a href="#about" className="text-decoration-none text-light">SOBRE MÍ</a></li>
               <li><a href="#services" className="text-decoration-none text-light">SERVICIOS</a></li>
               <li><a href="#portfolio" className="text-decoration-none text-light">PORTAFOLIO</a></li>
               <li><a href="#week-details-anchor" className="text-decoration-none text-light">CUADERNO</a></li>
@@ -113,13 +113,13 @@ function App() {
                 className="col-lg-6"
               >
                 <h3 style={{ color: '#fff', fontWeight: 800, marginBottom: '20px', fontSize: '2.2rem' }}>
-                  Impulsamos tu crecimiento con soluciones tecnológicas de vanguardia
+                  Impulso tu crecimiento con soluciones tecnológicas de vanguardia
                 </h3>
                 <p style={{ color: 'var(--text-dim)', fontSize: '1.1rem' }}>
-                  En ADAT MARC nos especializamos en el desarrollo de software a medida, integración de sistemas de hardware y asesoría tecnológica para empresas que buscan innovar y crecer.
+                  En mi portafolio ADAT MARC, me especializo en el desarrollo de software a medida, integración de sistemas de hardware y asesoría tecnológica para proyectos y empresas que buscan innovar y crecer.
                 </p>
                 <p style={{ color: 'var(--text-dim)', fontSize: '1.1rem' }}>
-                  Con un enfoque basado en la eficiencia, confiabilidad e innovación, diseñamos soluciones que optimizan procesos, mejoran la productividad y fortalecen la infraestructura tecnológica de nuestros clientes.
+                  Con un enfoque basado en la eficiencia, confiabilidad e innovación, diseño soluciones que optimizan procesos, mejoran la productividad y fortalecen la infraestructura tecnológica de mis clientes.
                 </p>
               </motion.div>
               <motion.div 
@@ -132,8 +132,8 @@ function App() {
                 <div className="glass-image-placeholder">
                   <div className="text-center">
                     <i className="bi bi-rocket-takeoff service-icon-large" style={{ color: 'var(--primary)', filter: 'drop-shadow(0 0 10px var(--primary))' }}></i>
-                    <h4 style={{ fontWeight: 700, color: '#fff' }}>Misión ADAT MARC</h4>
-                    <p style={{ opacity: 0.9, color: 'var(--text-dim)' }}>Conectar la tecnología con las necesidades reales de tu empresa.</p>
+                    <h4 style={{ fontWeight: 700, color: '#fff' }}>Mi Misión</h4>
+                    <p style={{ opacity: 0.9, color: 'var(--text-dim)' }}>Conectar la tecnología con las necesidades reales de tus proyectos o negocio.</p>
                   </div>
                 </div>
               </motion.div>
@@ -170,7 +170,7 @@ function App() {
                 <motion.div whileHover={{ y: -10 }} className="p-4 rounded-4 shadow-sm h-100" style={{ background: 'var(--bg-card)', border: '1px solid var(--glass-border)' }}>
                   <i className="bi bi-people fs-1 mb-3" style={{ color: 'var(--primary)' }}></i>
                   <h2 style={{ fontWeight: 800, color: '#fff' }}>10+</h2>
-                  <p className="mb-0 text-secondary fw-bold" style={{ color: 'var(--text-dim)' }}>Clientes Estratégicos</p>
+                  <p className="mb-0 text-secondary fw-bold" style={{ color: 'var(--text-dim)' }}>Proyectos / Clientes</p>
                 </motion.div>
               </div>
             </div>
@@ -181,7 +181,7 @@ function App() {
         <section id="services" className="services section py-5" style={{ background: 'var(--bg-dark)' }}>
           <div className="container py-5 text-center">
             <h2 style={{ color: 'var(--primary)', fontWeight: 700, textTransform: 'uppercase', letterSpacing: '2px', fontSize: '1rem' }}>Servicios</h2>
-            <h3 style={{ color: '#fff', fontWeight: 800, fontSize: '2.5rem', marginBottom: '50px' }}>Nuestras Especialidades</h3>
+            <h3 style={{ color: '#fff', fontWeight: 800, fontSize: '2.5rem', marginBottom: '50px' }}>Mis Especialidades</h3>
             
             <div className="row gy-5">
               <motion.div whileHover={{ scale: 1.05 }} className="col-xl-4 col-md-6">
@@ -190,7 +190,7 @@ function App() {
                     <i className="bi bi-database" style={{ fontSize: '2rem', color: 'var(--primary)' }}></i>
                   </div>
                   <h4 style={{ fontWeight: 700, color: '#fff' }}>Bases de Datos</h4>
-                  <p style={{ color: 'var(--text-dim)' }}>Diseñamos, implementamos y gestionamos bases de datos seguras y altamente escalables.</p>
+                  <p style={{ color: 'var(--text-dim)' }}>Diseño, implemento y gestiono bases de datos seguras y altamente escalables.</p>
                 </div>
               </motion.div>
               <motion.div whileHover={{ scale: 1.05 }} className="col-xl-4 col-md-6">
@@ -199,7 +199,7 @@ function App() {
                     <i className="bi bi-braces" style={{ fontSize: '2rem', color: 'var(--secondary)' }}></i>
                   </div>
                   <h4 style={{ fontWeight: 700, color: '#fff' }}>Desarrollo de Software</h4>
-                  <p style={{ color: 'var(--text-dim)' }}>Creamos sitios web corporativos modernos, software personalizado y plataformas a medida.</p>
+                  <p style={{ color: 'var(--text-dim)' }}>Creo sitios web corporativos modernos, software personalizado y plataformas a medida.</p>
                 </div>
               </motion.div>
               <motion.div whileHover={{ scale: 1.05 }} className="col-xl-4 col-md-6">
@@ -208,7 +208,7 @@ function App() {
                     <i className="bi bi-cpu" style={{ fontSize: '2rem', color: 'var(--primary)' }}></i>
                   </div>
                   <h4 style={{ fontWeight: 700, color: '#fff' }}>Hardware</h4>
-                  <p style={{ color: 'var(--text-dim)' }}>Instalamos, configuramos y mantenemos equipos de alta calidad para tu infraestructura.</p>
+                  <p style={{ color: 'var(--text-dim)' }}>Instalo, configuro y mantengo equipos de alta calidad para tu infraestructura.</p>
                 </div>
               </motion.div>
             </div>
@@ -252,7 +252,7 @@ function App() {
                       <i className="bi bi-telephone fs-4" style={{ color: 'var(--primary)' }}></i>
                     </div>
                     <div>
-                      <h4 className="mb-1 text-light" style={{ fontWeight: 700, fontSize: '1.1rem' }}>Llámanos</h4>
+                      <h4 className="mb-1 text-light" style={{ fontWeight: 700, fontSize: '1.1rem' }}>Mi Teléfono</h4>
                       <p className="mb-0" style={{ color: 'var(--text-dim)' }}>+51 937 480 592</p>
                     </div>
                   </div>
