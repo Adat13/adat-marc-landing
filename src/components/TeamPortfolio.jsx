@@ -320,7 +320,6 @@ const projectsConcluidos = [
     description: "Sitio web de pastelería con maquetación semántica estructurada, metadatos optimizados para SEO y accesibilidad completa.",
     tools: ["HTML5", "SEO", "Semantic Markup"],
     link: "https://github.com/Adat13/Dulzemi",
-    deploy: "https://adat13.github.io/Dulzemi/",
     category: "Semana 2"
   },
   {
@@ -328,7 +327,7 @@ const projectsConcluidos = [
     description: "Plataforma web con diseño adaptable Mobile-First utilizando CSS Grid y Flexbox avanzado para un impacto visual moderno.",
     tools: ["CSS3 Flexbox", "CSS Grid", "Responsive Design"],
     link: "https://github.com/Adat13/alfa-green",
-    deploy: "https://adat13.github.io/alfa-green/",
+    deploy: "https://alfa-green.com/",
     category: "Semana 3"
   },
   {

@@ -230,8 +230,7 @@ function App() {
         <section id="contact" className="contact section py-5" style={{ background: 'var(--bg-dark)' }}>
           <div className="container py-5">
             <div className="text-center mb-5">
-              <h2 style={{ color: 'var(--primary)', fontWeight: 700, textTransform: 'uppercase', letterSpacing: '2px', fontSize: '1rem' }}>Contacto</h2>
-              <h3 style={{ color: '#fff', fontWeight: 800, fontSize: '2.5rem' }}>Escríbenos</h3>
+              <h2 style={{ color: '#fff', fontWeight: 800, fontSize: '2.5rem', marginBottom: '0' }}>Contacto</h2>
             </div>
 
             <div className="row gy-4">
