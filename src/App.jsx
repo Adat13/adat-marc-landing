@@ -287,27 +287,42 @@ function App() {
               </div>
 
               <div className="col-lg-7">
-                <form className="p-5 rounded-4 shadow-sm" style={{ background: 'var(--bg-card)', border: '1px solid var(--glass-border)' }}>
-                  <div className="row gy-4">
-                    <div className="col-md-6">
-                      <input type="text" className="form-control py-3 text-light bg-dark border-secondary" placeholder="Tu Nombre" required />
-                    </div>
-                    <div className="col-md-6">
-                      <input type="email" className="form-control py-3 text-light bg-dark border-secondary" placeholder="Tu Email" required />
-                    </div>
-                    <div className="col-12">
-                      <input type="text" className="form-control py-3 text-light bg-dark border-secondary" placeholder="Asunto" required />
-                    </div>
-                    <div className="col-12">
-                      <textarea className="form-control py-3 text-light bg-dark border-secondary" rows="5" placeholder="Mensaje" required></textarea>
-                    </div>
-                    <div className="col-12 text-center mt-4">
-                      <button type="button" className="btn btn-primary rounded-pill px-5 py-3 w-100" style={{ background: 'var(--accent-gradient)', border: 'none', fontWeight: 700, fontSize: '1.1rem', color: '#fff', boxShadow: '0 0 15px var(--primary-glow)' }}>
-                        Enviar Mensaje
-                      </button>
-                    </div>
+                <div className="p-5 rounded-4 shadow-sm h-100 d-flex flex-column justify-content-center text-center text-lg-start" style={{ background: 'var(--bg-card)', border: '1px solid var(--glass-border)', backdropFilter: 'blur(10px)' }}>
+                  <div className="mb-4 d-inline-flex align-items-center justify-content-center mx-auto mx-lg-0" style={{ width: '80px', height: '80px', borderRadius: '24px', background: 'rgba(37, 211, 102, 0.1)', border: '1px solid rgba(37, 211, 102, 0.2)' }}>
+                    <i className="bi bi-whatsapp" style={{ fontSize: '2.5rem', color: '#25D366', filter: 'drop-shadow(0 0 10px rgba(37, 211, 102, 0.5))' }}></i>
                   </div>
-                </form>
+                  <h3 className="mb-3 text-light" style={{ fontWeight: 800, fontSize: '2rem' }}>
+                    ¡Hablemos por <span style={{ color: '#25D366' }}>WhatsApp</span>!
+                  </h3>
+                  <p style={{ color: 'var(--text-dim)', fontSize: '1.1rem', lineHeight: '1.7', marginBottom: '2.5rem' }}>
+                    Si tienes un proyecto en mente, una consulta rápida o quieres cotizar un servicio de hardware o software, escríbeme directamente a mi WhatsApp personal. ¡Te responderé de inmediato!
+                  </p>
+                  <a 
+                    href="https://wa.me/51937480592?text=Hola%20David%2C%20vi%20tu%20portafolio%20y%20me%20gustar%C3%ADa%20conversar%20sobre%20un%20proyecto."
+                    target="_blank" 
+                    rel="noopener noreferrer" 
+                    className="btn btn-success rounded-pill px-5 py-3 align-self-center align-self-lg-start d-inline-flex align-items-center gap-3" 
+                    style={{ 
+                      background: 'linear-gradient(135deg, #25D366 0%, #128C7E 100%)', 
+                      border: 'none', 
+                      fontWeight: 700, 
+                      fontSize: '1.1rem', 
+                      color: '#fff', 
+                      boxShadow: '0 8px 25px rgba(37, 211, 102, 0.3)',
+                      transition: 'all 0.3s ease'
+                    }}
+                    onMouseEnter={e => {
+                      e.currentTarget.style.transform = 'scale(1.05)';
+                      e.currentTarget.style.boxShadow = '0 12px 30px rgba(37, 211, 102, 0.5)';
+                    }}
+                    onMouseLeave={e => {
+                      e.currentTarget.style.transform = 'scale(1)';
+                      e.currentTarget.style.boxShadow = '0 8px 25px rgba(37, 211, 102, 0.3)';
+                    }}
+                  >
+                    <i className="bi bi-whatsapp fs-5"></i> Enviar Mensaje de WhatsApp
+                  </a>
+                </div>
               </div>
             </div>
           </div>
