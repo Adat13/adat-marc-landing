@@ -269,7 +269,7 @@ const weeksData = [
 const teamMember = {
   name: "David Angel Toribio Anselmo",
   role: "Desarrollador Full Stack & UI/UX",
-  bio: "Estudiante apasionado de la ingeniería de software y desarrollo web. Me especializo en crear interfaces web hermosas, dinámicas y altamente interactivas usando herramientas modernas como React, CSS avanzado, Framer Motion y gráficos web en 3D.",
+  bio: "Estudiante de Ingeniería de Sistemas apasionado por el desarrollo de software y la arquitectura web. Me especializo en crear interfaces web hermosas, dinámicas y altamente interactivas usando herramientas modernas como React, CSS avanzado, Framer Motion y gráficos web en 3D.",
   education: [
     { degree: "Estudiante de Ingeniería de Sistemas", institution: "Universidad Nacional del Centro del Perú (UNCP)", period: "2022 - Presente" },
     { degree: "Desarrollo Frontend Moderno & Web 3D", institution: "Especialización Autónoma / Cursos en línea", period: "2024 - 2026" }
@@ -923,9 +923,9 @@ const TeamPortfolio = () => {
       <div className="reflexion-final-section" style={{ marginTop: '8rem', borderTop: '1px solid var(--glass-border)', paddingTop: '5rem' }}>
         <div className="section-header-centered">
           <span className="badge">Meta-evaluación</span>
-          <h2 className="section-title">Reflexión Final <span className="text-gradient">del Curso</span></h2>
+          <h2 className="section-title">Reflexión a la <span className="text-gradient">Semana 8</span></h2>
           <p className="section-subtitle">
-            Un análisis metacognitivo sobre el progreso personal, los retos superados y los conocimientos integrados durante el semestre.
+            Un análisis metacognitivo sobre el progreso personal, los retos superados y los conocimientos integrados hasta la octava semana del curso.
           </p>
         </div>
 
