@@ -33,7 +33,7 @@ const weeksData = [
     color: "#00f5ff",
     image: "https://images.unsplash.com/photo-1555066931-4365d14bab8c?auto=format&fit=crop&q=80&w=800",
     videoId: "8JJ101D3knE",
-    myNotes: "Esta semana fue clave para entender cómo funciona Git desde cero. Lo que más me costó fue entender las ramas, pero luego de practicar varias veces, ya se me hizo natural.",
+    myNotes: "En esta primera semana de inmersión en la ingeniería de software moderna, comprendí que la consola y Git no son meras herramientas adicionales, sino la base indispensable para el control de versiones. Mis apuntes se centraron en:\n1. El Área de Preparación (Staging Area): Entendí que es un espacio intermedio antes de confirmar cambios, lo que permite seleccionar qué archivos formarán parte del commit de manera precisa.\n2. El árbol de Git (Working Directory, Index, HEAD): Me costó asimilar cómo viajan los archivos entre el directorio de trabajo local, el índice y el HEAD, pero tras realizar múltiples diagramas y comandos como git log --graph --all y git status, logré visualizar el flujo.\n3. El manejo de ramas: Aprendí que las ramas son punteros móviles a commits específicos, facilitando el desarrollo paralelo y limpio. Configuramos el proyecto inicial vinculando la rama remota main con nuestro origen local.",
     myReflection: "Aprendí que un buen control de versiones es la base de todo proyecto serio. Desde ahora veo Git no como una obligación, sino como mi aliado.",
     resources: [
       { name: "Documentación oficial de Git", url: "https://git-scm.com/doc" },
@@ -64,7 +64,7 @@ const weeksData = [
     color: "#7000ff",
     image: "https://images.unsplash.com/photo-1627398240411-8ac59774139a?auto=format&fit=crop&q=80&w=800",
     videoId: "pQN-pnXPaVg",
-    myNotes: "Fue interesante ver la diferencia entre usar divs para todo versus usar etiquetas semánticas. Me sorprendió cuánto afecta la estructura al SEO.",
+    myNotes: "La transición del HTML básico al HTML5 semántico supuso un cambio cualitativo en la forma de estructurar la información en la web. Anoté los siguientes puntos clave:\n1. Semántica frente a Estética: Las etiquetas semánticas (<header>, <nav>, <main>, <section>, <article>, <aside>, <footer>) no tienen un impacto visual inmediato por defecto, pero informan a los motores de búsqueda y lectores de pantalla sobre el propósito y la relevancia jerárquica del contenido.\n2. SEO On-Page: Investigamos la importancia de los metadatos dinámicos (<meta name='description'>, Open Graph, Twitter Cards) y las etiquetas del encabezado (<title>, favicon) para maximizar la indexación en buscadores.\n3. Validación W3C: El uso estricto del validador W3C nos permitió detectar etiquetas mal cerradas o anidamientos inválidos, asegurando la robustez en la maquetación de 'Pastelería Dulzemi'.",
     myReflection: "Entendí que escribir HTML semántico no es solo para las máquinas, sino también para que cualquier desarrollador lea el código y lo entienda rápido.",
     resources: [
       { name: "MDN Web Docs - HTML", url: "https://developer.mozilla.org/es/docs/Web/HTML" },
@@ -90,13 +90,13 @@ const weeksData = [
       "Diseño Mobile-First adaptativo 100% responsivo."
     ],
     tools: ["CSS3 Flexbox", "CSS Grid", "Media Queries", "Google Fonts"],
-    deliverable: "Layout adaptable con soporte completo para smartphones, tablets y desktops.",
+    deliverable: "Layout adaptable con soporte completo para smartphones, tablets and desktops.",
     codeSnippet: `:root {\n  --primary: #00f5ff;\n  --bg: #0a0a0a;\n}\n.grid-container {\n  display: grid;\n  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));\n  gap: 2rem;\n}`,
     icon: Layers,
     color: "#ff007f",
     image: "https://images.unsplash.com/photo-1507721999472-8ed4421c4af2?auto=format&fit=crop&q=80&w=800",
     videoId: "yfoY53QXEnI",
-    myNotes: "CSS Grid me voló la cabeza. Antes solo usaba Flexbox para todo, pero Grid me dio un control total sobre el layout en dos dimensiones. Las variables CSS también me cambiaron la vida.",
+    myNotes: "CSS3 avanzado nos permitió llevar el diseño semántico a una dimensión visual adaptable y profesional. Mis notas de esta sesión técnica cubren:\n1. Modelos de Caja Avanzados: La integración de Flexbox para la alineación unidireccional y de CSS Grid para maquetaciones bidimensionales complejas. Logré dominar las propiedades grid-template-columns y la función repeat(auto-fit, minmax()) para layouts automáticos.\n2. Variables CSS: Definición en la pseudoclase :root de variables para colores primarios, secundarios, fondos y fuentes, facilitando el mantenimiento y permitiendo transiciones de temas dinámicos.\n3. Mobile-First Design: En lugar de maquetar para pantallas grandes y 'encoger' el diseño, aplicamos media queries para construir desde pantallas de 320px hacia arriba, evitando problemas de desbordamiento horizontal.",
     myReflection: "Esta semana entendí que el diseño responsivo no es un extra, es una responsabilidad. Si tu web no funciona en celular, no sirve.",
     resources: [
       { name: "A Complete Guide to Flexbox", url: "https://css-tricks.com/snippets/css/a-guide-to-flexbox/" },
@@ -128,7 +128,7 @@ const weeksData = [
     color: "#00ff66",
     image: "https://images.unsplash.com/photo-1579468118864-1b9ea3c0db4a?auto=format&fit=crop&q=80&w=800",
     videoId: "W6NZfCO5SIk",
-    myNotes: "La manipulación del DOM se volvió mi juguete favorito. Ver cómo el scroll cambia la navbar en tiempo real fue muy satisfactorio. Los eventos son más potentes de lo que pensaba.",
+    myNotes: "Con JavaScript nativo dotamos de interactividad lógica al cliente. Mis notas abarcan los siguientes conceptos fundamentales:\n1. El ciclo de eventos de JS: Aprendí cómo registrar escuchadores de eventos mediante .addEventListener() para capturar interacciones como scroll, clics y teclados.\n2. Manipulación dinámica del DOM: Métodos para añadir y remover clases CSS (classList.add/remove) y modificar estilos en tiempo real basándonos en variables de scroll (window.scrollY), logrando que la navbar sea fija y reduzca su opacidad al deslizar.\n3. Control de flujo y variables: Empleo de variables modernas de ámbito de bloque (let, const) y funciones flecha para escribir código lógico y mantenible.",
     myReflection: "JavaScript le da vida a todo. Esta semana pasé de hacer páginas estáticas a crear experiencias reales de usuario. Fue un salto enorme.",
     resources: [
       { name: "JavaScript Info Tutorial", url: "https://javascript.info/" },
@@ -160,7 +160,7 @@ const weeksData = [
     color: "#ffaa00",
     image: "https://images.unsplash.com/photo-1633356122544-f134324a6cee?auto=format&fit=crop&q=80&w=800",
     videoId: "bMknfKXIFA8",
-    myNotes: "Al principio JSX me confundía mucho, mezclar HTML con JavaScript se sentía raro. Pero después de entender el flujo de datos con Props y useState, todo empezó a tener sentido.",
+    myNotes: "Esta semana marcó la migración hacia React 18 y el desarrollo basado en componentes. Mis apuntes detallan:\n1. Paradigma Declarativo frente a Imperativo: En React, no modificamos directamente el DOM; en su lugar, declaramos cómo debería verse la UI en base al estado actual, y React se encarga de realizar la actualización eficiente de los nodos.\n2. Hooks de Estado y Efectos: El hook useState para declarar variables reactivas locales y useEffect para sincronizar efectos secundarios (como listeners globales o llamadas a APIs).\n3. Arquitectura modular con Vite: Configuración de rutas relativas y paso de información unidireccional estructurada mediante propiedades (Props) desde componentes contenedores hacia componentes de presentación.",
     myReflection: "React cambió por completo mi forma de pensar el código. Ya no pienso en páginas, sino en componentes reutilizables. Es un antes y un después en mi aprendizaje.",
     resources: [
       { name: "React Official Docs", url: "https://react.dev/" },
@@ -192,7 +192,7 @@ const weeksData = [
     color: "#00f5ff",
     image: "https://images.unsplash.com/photo-1550745165-9bc0b252726f?auto=format&fit=crop&q=80&w=800",
     videoId: "bMknfKXIFA8",
-    myNotes: "Framer Motion me pareció increíble. Con pocas líneas de código logré animaciones que antes me hubieran tomado horas con CSS puro. El AnimatePresence es lo que más usé.",
+    myNotes: "Las animaciones con Framer Motion transformaron la experiencia de usuario (UX) del portafolio. Mis apuntes se centran en:\n1. Física de resortes (Spring Physics): Entendí por qué las transiciones lineales tradicionales se sienten mecánicas. Framer Motion utiliza simulaciones físicas reales con propiedades de rigidez (stiffness) y amortiguamiento (damping).\n2. Orquestación de animaciones: Configuración de variantes (variants) para coordinar la entrada secuencial de elementos hijos (staggerChildren), logrando transiciones de carga suaves y sumamente estéticas.\n3. AnimatePresence: Montaje y desmontaje interactivo de componentes del DOM de manera fluida y animada.",
     myReflection: "Las animaciones no son decoración, son comunicación. Una buena transición le dice al usuario que algo cambió sin necesidad de palabras.",
     resources: [
       { name: "Framer Motion Docs", url: "https://www.framer.com/motion/" },
@@ -224,7 +224,7 @@ const weeksData = [
     color: "#7000ff",
     image: "https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?auto=format&fit=crop&q=80&w=800",
     videoId: "xJAfLdUgdc4",
-    myNotes: "Three.js fue lo más desafiante de todo el curso. Entender meshes, luces y la cámara me tomó bastante tiempo, pero cuando vi el auto moverse en 3D dentro del browser, valió cada minuto.",
+    myNotes: "El desarrollo en tres dimensiones (WebGL) mediante React Three Fiber fue la sesión más retadora del curso. Anoté los siguientes conceptos matemáticos y espaciales:\n1. Escena, Cámara y Luces: El funcionamiento de la escena WebGL, la configuración de la perspectiva de cámara y el balance de luces ambientales, direccionales y focales para lograr sombras realistas.\n2. Geometrías y Materiales: Creación de mallas (meshes) combinando geometrías (boxes, planes) con materiales estándar reactivos a la iluminación.\n3. Bucle de render (useFrame): Manipulación frame por frame de las posiciones y rotaciones de los modelos mediante el bucle de actualización, permitiendo programar la cámara seguidora que rastrea la posición de nuestro vehículo.",
     myReflection: "El 3D en la web es el futuro. Esta semana me demostró que el navegador puede hacer cosas que antes solo eran posibles en aplicaciones nativas o videojuegos.",
     resources: [
       { name: "React Three Fiber Docs", url: "https://docs.pmnd.rs/react-three-fiber/getting-started/introduction" },
@@ -256,7 +256,7 @@ const weeksData = [
     color: "#00ff66",
     image: "https://images.unsplash.com/photo-1618401471353-b98afee0b2eb?auto=format&fit=crop&q=80&w=800",
     videoId: "KCrXgy8qtjM",
-    myNotes: "La semana final fue de unir todo. Optimizar el bundle, limpiar el código y hacer el deploy fue agotador pero muy satisfactorio. Ver la página en vivo fue el mejor premio.",
+    myNotes: "La etapa de cierre se centró en la optimización de código, compilación y despliegue final en producción. Mis apuntes finales destacan:\n1. Compilación y Minificación: La ejecución de npm run build para compilar y agrupar recursos reduciendo el tamaño del bundle generado mediante Vite.\n2. Configuración de rutas de alojamiento: Solución al problema de carga de recursos utilizando rutas relativas correctas para el servidor.\n3. Automatización del despliegue: Integración de scripts automáticos (gh-pages) para compilar y subir directamente la carpeta /dist/ al servidor remoto de GitHub en una sola línea de comandos.",
     myReflection: "Este curso me demostró que puedo aprender cualquier tecnología si la practico constantemente. Empecé sin saber qué era un componente y terminé con un portafolio 3D en producción.",
     resources: [
       { name: "Vite Deploying a Static Site", url: "https://vitejs.dev/guide/static-deploy.html" },

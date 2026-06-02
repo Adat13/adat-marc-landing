@@ -95,8 +95,8 @@ function App() {
               transition={{ delay: 0.6, duration: 0.5 }}
               className="d-flex justify-content-center gap-3 mt-4"
             >
-              <a href="#about" className="btn btn-primary rounded-pill px-4 py-3" style={{ background: 'var(--accent-gradient)', border: 'none', fontWeight: 700, boxShadow: '0 4px 20px var(--primary-glow)' }}>Explorar Soluciones</a>
-              <a href="#contact" className="btn btn-outline-light rounded-pill px-4 py-3" style={{ fontWeight: 700 }}>Contáctanos</a>
+              <a href="#portfolio" className="btn btn-primary rounded-pill px-4 py-3" style={{ background: 'var(--accent-gradient)', border: 'none', fontWeight: 700, boxShadow: '0 4px 20px var(--primary-glow)' }}>Ver Portafolio</a>
+              <a href="#week-details-anchor" className="btn btn-outline-light rounded-pill px-4 py-3" style={{ fontWeight: 700 }}>Ver Cuaderno</a>
             </motion.div>
           </div>
         </section>
