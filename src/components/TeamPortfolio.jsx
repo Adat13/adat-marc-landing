@@ -8,6 +8,26 @@ import {
 } from 'lucide-react';
 import Portfolio3D from './Portfolio3D';
 
+// Custom SVG component for Github since the version of lucide-react lacks the export
+const Github = (props) => (
+  <svg
+    xmlns="http://www.w3.org/2000/svg"
+    width={props.size || 24}
+    height={props.size || 24}
+    viewBox="0 0 24 24"
+    fill="none"
+    stroke="currentColor"
+    strokeWidth="2"
+    strokeLinecap="round"
+    strokeLinejoin="round"
+    className={props.className}
+    style={props.style}
+  >
+    <path d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.403 5.403 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4" />
+    <path d="M9 18c-4.51 2-5-2-7-2" />
+  </svg>
+);
+
 const weeksData = [
   {
     number: 1,
@@ -300,6 +320,7 @@ const projectsConcluidos = [
     description: "Sitio web de pastelería con maquetación semántica estructurada, metadatos optimizados para SEO y accesibilidad completa.",
     tools: ["HTML5", "SEO", "Semantic Markup"],
     link: "https://github.com/Adat13/Dulzemi",
+    deploy: "https://adat13.github.io/Dulzemi/",
     category: "Semana 2"
   },
   {
@@ -307,6 +328,7 @@ const projectsConcluidos = [
     description: "Plataforma web con diseño adaptable Mobile-First utilizando CSS Grid y Flexbox avanzado para un impacto visual moderno.",
     tools: ["CSS3 Flexbox", "CSS Grid", "Responsive Design"],
     link: "https://github.com/Adat13/alfa-green",
+    deploy: "https://adat13.github.io/alfa-green/",
     category: "Semana 3"
   },
   {
@@ -314,6 +336,7 @@ const projectsConcluidos = [
     description: "Laboratorio interactivo y manipulaciones avanzadas de DOM para el registro y gestión de datos académicos.",
     tools: ["JavaScript ES6+", "DOM Manipulation", "EventListeners"],
     link: "https://github.com/Adat13/DESARROLLO-WEB-FIS",
+    deploy: "https://adat13.github.io/DESARROLLO-WEB-FIS/",
     category: "Semana 4"
   },
   {
@@ -321,6 +344,7 @@ const projectsConcluidos = [
     description: "Panel de administración interactivo desarrollado en React 18 con manejo de estados, componentes reutilizables y props dinámicas.",
     tools: ["React 18+", "Vite", "useState / useEffect"],
     link: "https://github.com/Adat13/chifa-richi",
+    deploy: "https://chifa-richi.adat-marc.com/",
     category: "Semana 5"
   },
   {
@@ -328,6 +352,7 @@ const projectsConcluidos = [
     description: "Portal moderno con micro-interacciones suaves y animaciones de física de resorte mediante Framer Motion.",
     tools: ["Framer Motion", "Spring Physics", "React"],
     link: "https://github.com/Adat13/WebOrion",
+    deploy: "https://orionelite.edu.pe/",
     category: "Semana 6"
   },
   {
@@ -335,6 +360,7 @@ const projectsConcluidos = [
     description: "Entorno interactivo 3D con físicas básicas de conducción de un vehículo, iluminación de alta gama y WebGL.",
     tools: ["Three.js", "React Three Fiber", "@react-three/drei"],
     link: "https://github.com/Adat13/PRACTICA_07",
+    deploy: "https://adat13.github.io/PRACTICA_07/",
     category: "Semana 7"
   },
   {
@@ -342,6 +368,7 @@ const projectsConcluidos = [
     description: "Este mismo portafolio integrado con la landing page de ADAT MARC, optimizado para alto rendimiento y desplegado en GitHub Pages.",
     tools: ["Vite Build", "React", "Deployment"],
     link: "https://github.com/Adat13/adat-marc-landing",
+    deploy: "https://adat13.github.io/adat-marc-landing/",
     category: "Semana 8"
   }
 ];
@@ -500,6 +527,18 @@ const TeamPortfolio = () => {
             </div>
           </div>
 
+          {/* 6. Apuntes y Notas Personales */}
+          {week.myNotes && (
+            <div style={{ background: 'rgba(255,255,255,0.01)', border: '1px solid var(--glass-border)', padding: '1.5rem', borderRadius: '16px', marginBottom: '2rem' }}>
+              <h4 style={{ color: '#fff', fontSize: '1.05rem', fontWeight: 700, display: 'flex', alignItems: 'center', gap: '0.5rem', marginBottom: '0.8rem' }}>
+                <Terminal size={18} style={{ color: week.color }} /> Mis Apuntes y Notas Personales
+              </h4>
+              <p style={{ color: 'var(--text-dim)', fontSize: '0.9rem', lineHeight: '1.7', margin: 0, whiteSpace: 'pre-line' }}>
+                {week.myNotes}
+              </p>
+            </div>
+          )}
+
           <div style={{ marginTop: '2.5rem' }}>
             <h4 style={{ fontSize: '1rem', color: '#fff', marginBottom: '1rem', display: 'flex', alignItems: 'center', gap: '0.5rem' }}>
               <Wrench size={16} /> Stack & Herramientas:
@@ -620,6 +659,30 @@ const TeamPortfolio = () => {
             <h1 className="profile-name text-gradient">{teamMember.name}</h1>
             <p className="profile-role">{teamMember.role}</p>
             <p className="profile-bio">{teamMember.bio}</p>
+            <div style={{ marginTop: '1.2rem', display: 'flex', gap: '1rem', alignItems: 'center' }}>
+              <a 
+                href="https://github.com/Adat13" 
+                target="_blank" 
+                rel="noopener noreferrer" 
+                style={{ 
+                  color: 'var(--primary)', 
+                  textDecoration: 'none', 
+                  fontSize: '0.85rem', 
+                  fontWeight: 600,
+                  display: 'inline-flex',
+                  alignItems: 'center',
+                  gap: '0.5rem',
+                  padding: '0.4rem 1rem',
+                  background: 'rgba(0, 245, 255, 0.05)',
+                  border: '1px solid rgba(0, 245, 255, 0.2)',
+                  borderRadius: '20px',
+                  transition: 'all 0.3s ease'
+                }}
+                className="github-profile-link"
+              >
+                <Github size={16} /> GitHub Profile
+              </a>
+            </div>
           </div>
         </div>
 
@@ -746,15 +809,28 @@ const TeamPortfolio = () => {
                 ))}
               </div>
 
-              <a 
-                href={project.link} 
-                target="_blank" 
-                rel="noopener noreferrer" 
-                className="btn btn-outline-light d-flex align-items-center justify-content-center gap-2"
-                style={{ fontSize: '0.85rem', padding: '0.5rem 1rem', borderRadius: '8px', border: '1px solid var(--glass-border)' }}
-              >
-                Ver Repositorio <ExternalLink size={14} />
-              </a>
+              <div style={{ display: 'flex', gap: '0.6rem', width: '100%', marginTop: 'auto' }}>
+                <a 
+                  href={project.link} 
+                  target="_blank" 
+                  rel="noopener noreferrer" 
+                  className="btn btn-outline-light d-flex align-items-center justify-content-center gap-2"
+                  style={{ flex: 1, fontSize: '0.8rem', padding: '0.5rem 0.5rem', borderRadius: '8px', border: '1px solid var(--glass-border)', whiteSpace: 'nowrap' }}
+                >
+                  <Github size={14} /> Repositorio
+                </a>
+                {project.deploy && (
+                  <a 
+                    href={project.deploy} 
+                    target="_blank" 
+                    rel="noopener noreferrer" 
+                    className="btn btn-primary d-flex align-items-center justify-content-center gap-2"
+                    style={{ flex: 1, fontSize: '0.8rem', padding: '0.5rem 0.5rem', borderRadius: '8px', background: 'var(--accent-gradient)', border: 'none', color: '#fff', boxShadow: '0 2px 8px var(--primary-glow)', whiteSpace: 'nowrap' }}
+                  >
+                    <Globe size={14} /> Sitio Web
+                  </a>
+                )}
+              </div>
             </motion.div>
           ))}
         </div>

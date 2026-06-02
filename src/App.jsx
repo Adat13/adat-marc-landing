@@ -258,14 +258,29 @@ function App() {
                     </div>
                   </div>
                 </div>
-                <div className="p-4 rounded-4" style={{ background: 'var(--bg-card)', border: '1px solid var(--glass-border)' }}>
+                <div className="p-4 rounded-4 mb-4" style={{ background: 'var(--bg-card)', border: '1px solid var(--glass-border)' }}>
                   <div className="d-flex align-items-center gap-3">
                     <div style={{ width: '50px', height: '50px', borderRadius: '50%', background: 'rgba(0,245,255,0.1)', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
                       <i className="bi bi-envelope fs-4" style={{ color: 'var(--primary)' }}></i>
                     </div>
                     <div>
                       <h4 className="mb-1 text-light" style={{ fontWeight: 700, fontSize: '1.1rem' }}>Email</h4>
-                      <p className="mb-0" style={{ color: 'var(--text-dim)' }}>davi.toribio2610@gmail.com</p>
+                      <p className="mb-0" style={{ color: 'var(--text-dim)' }}>david.toribio2610@gmail.com</p>
+                    </div>
+                  </div>
+                </div>
+                <div className="p-4 rounded-4" style={{ background: 'var(--bg-card)', border: '1px solid var(--glass-border)' }}>
+                  <div className="d-flex align-items-center gap-3">
+                    <div style={{ width: '50px', height: '50px', borderRadius: '50%', background: 'rgba(0,245,255,0.1)', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+                      <i className="bi bi-github fs-4" style={{ color: 'var(--primary)' }}></i>
+                    </div>
+                    <div>
+                      <h4 className="mb-1 text-light" style={{ fontWeight: 700, fontSize: '1.1rem' }}>GitHub</h4>
+                      <p className="mb-0">
+                        <a href="https://github.com/Adat13" target="_blank" rel="noopener noreferrer" style={{ color: 'var(--text-dim)', textDecoration: 'none', transition: 'color 0.2s' }} onMouseEnter={e => e.target.style.color = 'var(--primary)'} onMouseLeave={e => e.target.style.color = 'var(--text-dim)'}>
+                          github.com/Adat13
+                        </a>
+                      </p>
                     </div>
                   </div>
                 </div>
