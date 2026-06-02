@@ -63,7 +63,7 @@ function App() {
             </ul>
           </nav>
 
-          <a className="btn btn-primary rounded-pill px-4" style={{ background: 'var(--accent-gradient)', border: 'none', fontWeight: 'bold', color: '#fff', boxShadow: '0 4px 15px var(--primary-glow)' }} href="#contact">COTIZAR</a>
+          <a className="btn btn-primary rounded-pill px-4" style={{ background: 'var(--accent-gradient)', border: 'none', fontWeight: 'bold', color: '#fff', boxShadow: '0 4px 15px var(--primary-glow)' }} href="#week-details-anchor">CUADERNO</a>
         </div>
       </header>
 
