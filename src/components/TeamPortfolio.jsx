@@ -424,6 +424,146 @@ const weeksData = [
       { name: "Django ModelForms Guide", url: "https://docs.djangoproject.com/en/5.0/topics/forms/modelforms/" },
       { name: "Proyecto Django / Repo", url: "https://github.com/Adat13" }
     ]
+  },
+  {
+    number: 13,
+    unit: "Unidad II",
+    unitTitle: "Unidad II: Desarrollo Web Fullstack",
+    unitCapacity: "Desarrollar aplicaciones web frontend y backend con consumo de APIs del lado servidor y basado en estándares internacionales.",
+    title: "Semana 13: Autenticación y Autorización en Django",
+    period: "Control de Acceso & Sesiones (django.contrib.auth)",
+    summary: "Autenticación de usuarios en Django, permisos, grupos, control de acceso basado en roles (RBAC), sesiones y middleware de seguridad web.",
+    extendedDescription: "En la semana 13 abordamos el control de acceso y seguridad web en Django. Aprendimos a gestionar usuarios nativos de Django (`django.contrib.auth`), crear vistas de login, logout y registro, aplicar decoradores de autenticación (`@login_required`), manejar permisos y grupos, gestionar cookies y sesiones, y asegurar la aplicación contra vulnerabilidades web comunes como XSS y Clickjacking.",
+    definitions: "La autenticación verifica la identidad del usuario (¿Quién eres?). La autorización determina qué recursos y acciones tiene permitidas (¿Qué puedes hacer?). Las sesiones mantienen el estado entre peticiones HTTP.",
+    procedure: "1. Configurar vistas de autenticación con django.contrib.auth.\n2. Crear formularios de registro y login extendiendo UserCreationForm.\n3. Aplicar decoradores @login_required y mixins de permisos en vistas CBV.\n4. Configurar middleware de seguridad y gestión de cookies/sesiones.",
+    labExercises: "Laboratorio 13: Sistema de autenticación y control de accesos con usuarios y roles.",
+    labResults: "Aplicación web Django con login, logout, registro seguro de usuarios y restricción de contenido según permisos de usuario.",
+    myReflectionWhat: "Aprendí la importancia crucial de separar la autenticación de la autorización y a implementar sesiones seguras utilizando el middleware nativo de Django.",
+    myReflectionHow: "Lo aprendí creando roles de usuario, protegiendo rutas con el decorador @login_required y simulando intentos de acceso no autorizados.",
+    achievements: [
+      "Implementación de autenticación de usuarios y registro con django.contrib.auth.",
+      "Gestión de permisos de acceso basado en roles (RBAC) y protecciones de rutas con decoradores.",
+      "Manejo de sesiones HTTP, cookies seguras y prevención de vulnerabilidades de seguridad."
+    ],
+    tools: ["Django Auth", "Sessions & Cookies", "RBAC", "Security Middleware", "User Management"],
+    deliverable: "Módulo de autenticación y control de accesos seguro con vistas de registro, login y protección de rutas.",
+    codeSnippet: `from django.contrib.auth.decorators import login_required\nfrom django.shortcuts import render\n\n@login_required\ndef dashboard_view(request):\n    user = request.user\n    return render(request, 'dashboard.html', {'user': user})`,
+    icon: User,
+    color: "#9c27b0",
+    image: "https://images.unsplash.com/photo-1563986768609-322da13575f3?auto=format&fit=crop&q=80&w=800",
+    videoId: "F5mRW0jo-U4",
+    myNotes: "El control de acceso es la piedra angular del backend seguro. Apuntes de la sesión:\n1. User model: Ampliación del modelo User con perfiles personalizados.\n2. RBAC: Asignación de grupos y permisos específicos por módulo.\n3. Cookies y Sesiones: Encriptación de sessionid en galletas HTTP-only.",
+    myReflection: "Asegurar que cada recurso tenga los permisos correctos evita filtraciones de información y garantiza un entorno web confiable para los usuarios.",
+    resources: [
+      { name: "Django Authentication Docs", url: "https://docs.djangoproject.com/en/5.0/topics/auth/" },
+      { name: "OWASP Web Security Guidelines", url: "https://owasp.org/www-project-top-ten/" },
+      { name: "Proyecto Django Auth / Repo", url: "https://github.com/Adat13" }
+    ]
+  },
+  {
+    number: 14,
+    unit: "Unidad II",
+    unitTitle: "Unidad II: Desarrollo Web Fullstack",
+    unitCapacity: "Desarrollar aplicaciones web frontend y backend con consumo de APIs del lado servidor y basado en estándares internacionales.",
+    title: "Semana 14: APIs RESTful con Django REST Framework",
+    period: "Web APIs & Serialización (DRF)",
+    summary: "Principios de arquitecturas REST, instalación de Django REST Framework (DRF), serializadores, ModelSerializer, ViewSets y enrutadores para endpoints JSON.",
+    extendedDescription: "En la semana 14 construimos servicios Web API basados en arquitectura RESTful utilizando Django REST Framework (DRF). Aprendimos los principios de diseño de APIs REST, métodos HTTP (GET, POST, PUT, DELETE), creación de serializadores (`ModelSerializer`) para transformar mallas de datos a JSON, vistas de API (`APIView`, `generics`, `ModelViewSet`) y generación automática de URLs con Routers.",
+    definitions: "Una API RESTful es una interfaz que permite la comunicación entre sistemas independientes mediante recursos expuestos a través de URLs estándar y formatos como JSON. Los serializadores convierten objetos complejos de Django ORM a tipos de datos nativos de Python renderizables en JSON.",
+    procedure: "1. Instalar djangorestframework y agregarlo a INSTALLED_APPS.\n2. Definir serializadores en serializers.py extendiendo ModelSerializer.\n3. Crear ViewSets o vistas genéricas APIView para exponer recursos CRUD.\n4. Configurar DefaultRouter para mapear URLs de la API automáticamente.",
+    labExercises: "Laboratorio 14: Construcción de una API RESTful completa con endpoints CRUD en Django REST Framework.",
+    labResults: "Servidor de API RESTful exponiendo recursos JSON con soporte completo de operaciones CRUD y documentación interactiva DRF.",
+    myReflectionWhat: "Aprendí a estructurar endpoints de API legibles y estandarizados utilizando los ViewSets y Routers de Django REST Framework.",
+    myReflectionHow: "Lo aprendí creando modelos en Django, redactando serializadores para validar cargas JSON y consumiendo la API interactiva con Postman y la consola de DRF.",
+    achievements: [
+      "Diseño de APIs RESTful siguiendo estándares HTTP y respuestas JSON estructuradas.",
+      "Creación de serializadores con DRF para validación y transformación de datos ORM.",
+      "Implementación de ViewSets y Routers para generación automática de rutas de API."
+    ],
+    tools: ["Django REST Framework", "JSON APIs", "Serializers", "ViewSets", "REST Architecture"],
+    deliverable: "Servidor API RESTful funcional exponiendo endpoints CRUD probados y documentados en DRF.",
+    codeSnippet: `from rest_framework import serializers, viewsets\nfrom .models import Project\n\nclass ProjectSerializer(serializers.ModelSerializer):\n    class Meta:\n        model = Project\n        fields = '__all__'\n\nclass ProjectViewSet(viewsets.ModelViewSet):\n    queryset = Project.objects.all()\n    serializer_class = ProjectSerializer`,
+    icon: Cpu,
+    color: "#e91e63",
+    image: "https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&q=80&w=800",
+    videoId: "F5mRW0jo-U4",
+    myNotes: "Django REST Framework simplifica drásticamente la creación de APIs en Python. Puntos clave:\n1. Serializers: Validación de esquema JSON bidireccional (parseo e inyección a ORM).\n2. ViewSets: Consolidación de métodos CRUD en una sola clase limpia.\n3. Routers: Generación automática de patrones de URL enrutados (/api/v1/projects/).",
+    myReflection: "La arquitectura decoupled con APIs REST libera al frontend de depender del renderizado server-side clásico, permitiendo que React consuma datos libremente.",
+    resources: [
+      { name: "Django REST Framework Docs", url: "https://www.django-rest-framework.org/" },
+      { name: "REST API Design Best Practices", url: "https://restfulapi.net/" },
+      { name: "Proyecto DRF / Repo", url: "https://github.com/Adat13" }
+    ]
+  },
+  {
+    number: 15,
+    unit: "Unidad II",
+    unitTitle: "Unidad II: Desarrollo Web Fullstack",
+    unitCapacity: "Desarrollar aplicaciones web frontend y backend con consumo de APIs del lado servidor y basado en estándares internacionales.",
+    title: "Semana 15: Integración Fullstack y Consumo de APIs",
+    period: "Conexión Client-Server (React + Django API)",
+    summary: "Consumo de APIs RESTful desde el frontend en React utilizando fetch/axios, gestión de CORS (Cross-Origin Resource Sharing), hooks asíncronos y estados globales.",
+    extendedDescription: "En la semana 15 logramos la integración fullstack uniendo el frontend en React con el backend de Django REST Framework. Solucionamos políticas CORS (`django-cors-headers`), implementamos peticiones HTTP asíncronas con `fetch` y `axios` dentro de `useEffect`, manejamos estados de carga (loading, error, success) y estructuramos una arquitectura desacoplada cliente-servidor basada en microservicios.",
+    definitions: "CORS (Cross-Origin Resource Sharing) es un mecanismo de seguridad del navegador que restringe las peticiones HTTP realizadas desde un dominio o puerto distinto al del servidor API. La integración fullstack conecta una SPA cliente con una API server-side.",
+    procedure: "1. Configurar django-cors-headers en el backend Django.\n2. Implementar llamadas asíncronas con Fetch/Axios en componentes React.\n3. Gestionar estados reactivos de datos cargados y errores de conexión.\n4. Sincronizar acciones de UI con mutaciones POST/PUT/DELETE hacia el backend.",
+    labExercises: "Laboratorio 15: Integración cliente-servidor conectando frontend React con backend Django REST API.",
+    labResults: "Aplicación web Fullstack 100% integrada realizando consumo dinámico de APIs en tiempo real con persistencia en base de datos.",
+    myReflectionWhat: "Aprendí a gestionar estados asíncronos y a controlar la experiencia de usuario (loaders, manejadores de error) durante el consumo de servicios web API.",
+    myReflectionHow: "Lo aprendí conectando peticiones de Axios desde componentes React hacia endpoints de Django corriendo localmente y manejando cabeceras CORS.",
+    achievements: [
+      "Configuración de seguridad CORS y comunicación asíncrona cliente-servidor.",
+      "Consumo de endpoints RESTful desde componentes React con llamadas Fetch/Axios.",
+      "Gestión de estados asíncronos (cargando, éxito, error) en la interfaz de usuario."
+    ],
+    tools: ["React", "Django REST API", "Axios / Fetch", "CORS Headers", "Asynchronous JS"],
+    deliverable: "Aplicación Fullstack conectada donde el cliente React consume y actualiza datos de la API backend Django.",
+    codeSnippet: `import { useEffect, useState } from 'react';\nimport axios from 'axios';\n\nfunction ProjectList() {\n  const [data, setData] = useState([]);\n  useEffect(() => {\n    axios.get('http://127.0.0.1:8000/api/projects/')\n      .then(res => setData(res.data))\n      .catch(err => console.error(err));\n  }, []);\n  return <div>Proyectos consumidos desde API: {data.length}</div>;\n}`,
+    icon: Globe,
+    color: "#00bcd4",
+    image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&q=80&w=800",
+    videoId: "F5mRW0jo-U4",
+    myNotes: "El momento cumbre del curso fue la conexión cliente-servidor. Puntos clave:\n1. Cabeceras CORS: Configuración de CORS_ALLOWED_ORIGINS en el backend.\n2. Axios Interceptors: Manejo centralizado de tokens de autorización Bearer/JWT.\n3. React Hooks Asíncronos: Despliegue de loaders y refresco de estado en UI tras cada mutación POST.",
+    myReflection: "Ver al cliente React reaccionar dinámicamente con los datos procesados en la base de datos de Django fue una experiencia sumamente gratificante.",
+    resources: [
+      { name: "Axios HTTP Client Guide", url: "https://axios-http.com/docs/intro" },
+      { name: "MDN CORS Explanation", url: "https://developer.mozilla.org/es/docs/Web/HTTP/CORS" },
+      { name: "Proyecto Fullstack / Repo", url: "https://github.com/Adat13" }
+    ]
+  },
+  {
+    number: 16,
+    unit: "Unidad II",
+    unitTitle: "Unidad II: Desarrollo Web Fullstack",
+    unitCapacity: "Desarrollar aplicaciones web frontend y backend con consumo de APIs del lado servidor y basado en estándares internacionales.",
+    title: "Semana 16: Despliegue Fullstack en Producción y Portafolio Consolidado",
+    period: "Deployment Cloud & Evaluación Final del Curso",
+    summary: "Despliegue de aplicaciones fullstack en servidores cloud (Render, Vercel, Railway), variables de entorno, compilación de assets, pruebas finales y presentación del portafolio consolidado.",
+    extendedDescription: "La semana 16 marcó la culminación exitosa del curso y de la Unidad II. Consolidados los conocimientos de frontend y backend, realizamos el proceso de empaquetado y despliegue en producción de la aplicación fullstack en servidores en la nube. Configuramos variables de entorno (`.env`), base de datos de producción (PostgreSQL/SQLite), servidor WSGI/ASGI (Gunicorn), políticas de seguridad y presentamos el portafolio educativo consolidado con todas las 16 semanas del semestre académico.",
+    definitions: "El despliegue fullstack en producción implica trasladar el código cliente y servidor a infraestructura en la nube escalable y accesible públicamente mediante HTTPS, garantizando rendimiento, disponibilidad y seguridad.",
+    procedure: "1. Configurar variables de entorno y base de datos de producción en settings.py.\n2. Empaquetar el frontend cliente y compilar assets estáticos con Vite.\n3. Configurar servidor WSGI (Gunicorn) y desplegar backend en la nube (Render/Railway).\n4. Conectar dominio público, verificar protocolos HTTPS y realizar pruebas de carga finales.",
+    labExercises: "Laboratorio 16: Despliegue integral de la aplicación Fullstack y entrega final del portafolio educativo.",
+    labResults: "Aplicación web Fullstack desplegada en servidores cloud en producción y portafolio consolidado publicado con 16 semanas de aprendizaje.",
+    myReflectionWhat: "Aprendí el ciclo de vida completo de ingeniería de software web: desde la ideación del maquetado hasta el despliegue cloud de arquitecturas fullstack complejas.",
+    myReflectionHow: "Lo aprendí empaquetando el backend Django con Gunicorn en Render, compilando el frontend React en Vercel/GitHub Pages y realizando auditorías de rendimiento Lighthouse.",
+    achievements: [
+      "Despliegue exitoso de backend Django y frontend React en infraestructura cloud.",
+      "Manejo de variables de entorno, seguridad HTTPS y bases de datos de producción.",
+      "Consolidación y presentación oficial del portafolio educativo del curso completo (Semanas 1 a 16)."
+    ],
+    tools: ["Render / Cloud Hosting", "Gunicorn", "PostgreSQL", "Environment Variables", "Fullstack Deployment"],
+    deliverable: "Aplicación Fullstack publicada en producción con acceso público HTTPS y portafolio interactivo completado.",
+    codeSnippet: `# Comandos de despliegue producción backend\npip install gunicorn dj-database-url\npython manage.py collectstatic --noinput\npython manage.py migrate\ngunicorn myproject.wsgi:application`,
+    icon: Award,
+    color: "#ff9800",
+    image: "https://images.unsplash.com/photo-1618401471353-b98afee0b2eb?auto=format&fit=crop&q=80&w=800",
+    videoId: "KCrXgy8qtjM",
+    myNotes: "Cierre triunfal de las 16 semanas del curso. Puntos clave:\n1. Cloud Hosting: Despliegue independiente del servicio de API en Render/Railway y del sitio cliente en Vercel/GitHub Pages.\n2. Variables de entorno: Aislamiento estricto de credenciales (SECRET_KEY, DATABASE_URL) fuera del repositorio.\n3. Consolidación: Portafolio listo para el campo laboral.",
+    myReflection: "Completar las 16 semanas de este curso me transformó en un desarrollador Full Stack con visión global, capaz de abordar desde la maquetación UI/UX hasta la arquitectura de servidor y despliegue cloud.",
+    resources: [
+      { name: "Render Deployment Guide for Django", url: "https://docs.render.com/deploy-django" },
+      { name: "Vite Deployment Docs", url: "https://vitejs.dev/guide/static-deploy.html" },
+      { name: "Portafolio ADAT MARC en GitHub", url: "https://github.com/Adat13/adat-marc-landing" }
+    ]
   }
 ];
 
@@ -440,20 +580,21 @@ const teamMember = {
     { position: "Desarrollador de Aplicaciones de Laboratorio", company: "Cátedra de Desarrollo Web UNCP", period: "2025", desc: "Implementación de dashboards, maquetaciones adaptativas Mobile-First, APIs backend y simulaciones 3D interactivas." }
   ],
   stats: [
-    { label: "Proyectos Completados", value: "16+", icon: CheckCircle },
-    { label: "Implementaciones", value: "14+", icon: Wrench },
+    { label: "Proyectos Completados", value: "20+", icon: CheckCircle },
+    { label: "Implementaciones", value: "16+", icon: Wrench },
     { label: "Innovación", value: "100%", icon: Sparkles },
-    { label: "Clientes Estratégicos", value: "9+", icon: User }
+    { label: "Clientes Estratégicos", value: "12+", icon: User }
   ],
   skills: [
     { name: "React / JavaScript (ES6+)", level: 92 },
     { name: "Python / Framework Django (MTV & ORM)", level: 90 },
     { name: "HTML5 / CSS3 (Flexbox & Grid)", level: 95 },
+    { name: "APIs RESTful (Django REST Framework)", level: 88 },
     { name: "Desarrollo Web Backend (PHP / JSP / APIs)", level: 85 },
     { name: "Animaciones (Framer Motion)", level: 88 },
     { name: "Gráficos Web (Three.js / React Three Fiber)", level: 85 },
     { name: "Control de versiones (Git & GitHub)", level: 90 },
-    { name: "Diseño Web Responsivo & UX/UI", level: 93 }
+    { name: "Despliegue Cloud & Producción", level: 86 }
   ]
 };
 
@@ -539,6 +680,35 @@ const projectsConcluidos = [
     tools: ["Django Forms", "ModelForm", "CSRF", "Validation"],
     link: "https://github.com/Adat13",
     category: "Semana 12"
+  },
+  {
+    title: "Sistema Autenticación & Roles Django",
+    description: "Control de acceso seguro con autenticación de usuarios (django.contrib.auth), protección de rutas por roles, gestión de sesiones y cookies.",
+    tools: ["Django Auth", "RBAC", "Sessions", "Security"],
+    link: "https://github.com/Adat13",
+    category: "Semana 13"
+  },
+  {
+    title: "API RESTful Django REST Framework",
+    description: "Construcción de servicios API Web con DRF exponiendo endpoints JSON con serializadores, ViewSets y Routers para operaciones CRUD.",
+    tools: ["Django REST Framework", "JSON APIs", "Serializers", "ViewSets"],
+    link: "https://github.com/Adat13",
+    category: "Semana 14"
+  },
+  {
+    title: "Integración Fullstack React + Django API",
+    description: "Consumo de API RESTful desde el frontend React con Fetch/Axios, resolución de políticas CORS y manejo de estados asíncronos.",
+    tools: ["React", "Django REST API", "Axios", "CORS"],
+    link: "https://github.com/Adat13",
+    category: "Semana 15"
+  },
+  {
+    title: "Despliegue Cloud Fullstack & Portafolio",
+    description: "Despliegue integral en producción en servidores cloud (Render/Vercel) con variables de entorno, servidor WSGI Gunicorn y entrega final del portafolio.",
+    tools: ["Cloud Hosting", "Gunicorn", "PostgreSQL", "Deployment"],
+    link: "https://github.com/Adat13/adat-marc-landing",
+    deploy: "https://adat13.github.io/adat-marc-landing/",
+    category: "Semana 16"
   }
 ];
 
@@ -1056,14 +1226,14 @@ const TeamPortfolio = () => {
             <button 
               onClick={() => setSelectedUnit('ALL')}
               style={{
-                padding: '0.5.rem 1.2rem', borderRadius: '10px', fontSize: '0.82rem', fontWeight: 700, cursor: 'pointer',
+                padding: '0.5rem 1.2rem', borderRadius: '10px', fontSize: '0.82rem', fontWeight: 700, cursor: 'pointer',
                 background: selectedUnit === 'ALL' ? 'var(--primary)' : 'rgba(255,255,255,0.04)',
                 color: selectedUnit === 'ALL' ? '#0a0d14' : '#8a9ab0',
                 border: selectedUnit === 'ALL' ? '1px solid var(--primary)' : '1px solid var(--glass-border)',
                 transition: 'all 0.2s'
               }}
             >
-              Todas las Semanas (1 - 12)
+              Todas las Semanas (1 - 16)
             </button>
             <button 
               onClick={() => setSelectedUnit('Unidad I')}
@@ -1087,7 +1257,7 @@ const TeamPortfolio = () => {
                 transition: 'all 0.2s'
               }}
             >
-              Unidad II: Fullstack (Sem 9-12)
+              Unidad II: Fullstack (Sem 9-16)
             </button>
           </div>
 
@@ -1263,10 +1433,10 @@ const TeamPortfolio = () => {
       {/* Reflexión Final */}
       <div className="reflexion-final-section" style={{ marginTop: '8rem', borderTop: '1px solid var(--glass-border)', paddingTop: '5rem' }}>
         <div className="section-header-centered">
-          <span className="badge">Meta-evaluación</span>
-          <h2 className="section-title">Reflexión a la <span className="text-gradient">Semana 8</span></h2>
+          <span className="badge">Meta-evaluación Semestral</span>
+          <h2 className="section-title">Reflexión Final del Curso <span className="text-gradient">(Semana 16)</span></h2>
           <p className="section-subtitle">
-            Un análisis metacognitivo sobre el progreso personal, los retos superados y los conocimientos integrados hasta la octava semana del curso.
+            Un análisis metacognitivo integral sobre el progreso personal, la evolución técnica y la consolidación de conocimientos a lo largo de las 16 semanas del curso.
           </p>
         </div>
 
@@ -1276,13 +1446,13 @@ const TeamPortfolio = () => {
           <div className="reflexion-grid">
             <div>
               <p style={{ fontSize: '1.1rem', color: '#fff', fontWeight: 600, lineHeight: '1.7', marginBottom: '1.5rem' }}>
-                "El camino del desarrollo web no es aprender líneas de código de memoria, sino comprender cómo se integran las tecnologías para resolver problemas reales del usuario."
+                "El desarrollo web moderno no se limita a maquetar el cliente o construir una base de datos aislada, sino a orquestar arquitecturas fullstack seguras, dinámicas y orientadas al usuario."
               </p>
               <p style={{ color: 'var(--text-dim)', fontSize: '0.95rem', lineHeight: '1.8', marginBottom: '1.5rem' }}>
-                A lo largo de este curso, he transitado por un camino que transformó mi perspectiva sobre el desarrollo frontend. Comencé aprendiendo a organizar código de manera profesional con Git y VS Code. Posteriormente, la transición hacia HTML5 semántico me enseñó a valorar la accesibilidad y el impacto en motores de búsqueda (SEO). Con CSS3 y el diseño Mobile-First, comprendí que una web no es verdaderamente útil si no es adaptable y fluida en pantallas pequeñas como celulares.
+                A lo largo de las 16 semanas del curso, transitamos por una curva de aprendizaje integral dividida en dos grandes pilares. En la <strong>Unidad I (Semanas 1-8)</strong>, dominamos las bases del frontend moderno: control de versiones con Git/GitHub, HTML5 semántico, CSS3 responsivo Mobile-First, interactividad nativa con JavaScript ES6+, la arquitectura SPA modular con React 18, animaciones fluidas con Framer Motion y experiencias inmersivas 3D con Three.js.
               </p>
               <p style={{ color: 'var(--text-dim)', fontSize: '0.95rem', lineHeight: '1.8', margin: 0 }}>
-                El gran salto ocurrió al dotar de interactividad al sitio mediante manipulación de DOM con JavaScript, abriendo las puertas al desarrollo con React 18, donde la modularidad y el estado reactivo redefinieron mi forma de programar. Finalmente, la integración de micro-interacciones mediante Framer Motion y experiencias inmersivas tridimensionales con Three.js (React Three Fiber) me demostraron que la web moderna no tiene límites.
+                Posteriormente, en la <strong>Unidad II (Semanas 9-16)</strong>, cerramos el ciclo convirtiéndonos en desarrolladores Fullstack. Exploramos la ejecución server-side con PHP y JSP, nos adentramos en la elegancia de Python y la arquitectura MTV de Django, implementamos formularios y validaciones avanzadas, diseñamos sistemas de autenticación y permisos con RBAC, construimos servicios API RESTful con Django REST Framework y logramos la integración total del cliente React con el servidor en producción cloud.
               </p>
             </div>
 
@@ -1292,7 +1462,7 @@ const TeamPortfolio = () => {
                   <Star size={16} /> ¿Qué aprendió?
                 </h4>
                 <p style={{ color: 'var(--text-dim)', fontSize: '0.9rem', lineHeight: '1.6', margin: 0 }}>
-                  Aprendí no solo tecnologías de punta (React, Three.js, Framer Motion), sino también la importancia de la arquitectura limpia, el rendimiento web y el diseño Mobile-First enfocado en el usuario final.
+                  Aprendí la arquitectura limpia Fullstack (Frontend SPA en React + Backend API RESTful en Django), gestión de bases de datos ORM, seguridad con autenticación JWT/Session, políticas CORS y despliegue cloud en producción.
                 </p>
               </div>
 
@@ -1301,7 +1471,7 @@ const TeamPortfolio = () => {
                   <Coffee size={16} /> ¿Cómo aprendió?
                 </h4>
                 <p style={{ color: 'var(--text-dim)', fontSize: '0.9rem', lineHeight: '1.6', margin: 0 }}>
-                  Mi aprendizaje fue 100% práctico. Cada semana se consolidó con laboratorios y entregables reales (Dulzemi, Alfa Green, Chifa Richi, etc.), enfrentándome a la depuración de errores, a la optimización de código y al despliegue real en producción en servidores como GitHub Pages.
+                  Mi aprendizaje se basó 100% en la práctica guiada semana a semana con 16 laboratorios reales, creando entregables desde sitios web estáticos hasta sistemas fullstack autenticados desplegados en servidores web y alojados en GitHub.
                 </p>
               </div>
             </div>
