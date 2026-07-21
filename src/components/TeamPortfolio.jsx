@@ -4,7 +4,8 @@ import profilePic from '../../167634689.jpeg';
 import { 
   User, Code, Cpu, BookOpen, ChevronRight, Calendar, Award, 
   Terminal, Globe, Layers, ArrowLeft, ExternalLink, Sparkles, GitBranch,
-  Wrench, CheckCircle, Flame, Star, Coffee, Code2, Play, Link, Video, Image as ImageIcon
+  Wrench, CheckCircle, Flame, Star, Coffee, Code2, Play, Link, Video, Image as ImageIcon,
+  Server, Database
 } from 'lucide-react';
 import Portfolio3D from './Portfolio3D';
 
@@ -283,30 +284,172 @@ const weeksData = [
       { name: "Web Performance Best Practices", url: "https://web.dev/fast/" },
       { name: "Proyecto Semanal: Portafolio ADAT MARC", url: "https://github.com/Adat13/adat-marc-landing" }
     ]
+  },
+  {
+    number: 9,
+    unit: "Unidad II",
+    unitTitle: "Unidad II: Desarrollo Web Fullstack",
+    unitCapacity: "Desarrollar aplicaciones web frontend y backend con consumo de APIs del lado servidor y basado en estándares internacionales.",
+    title: "Semana 9: Tecnología Web Backend",
+    period: "Servidores Web & Server-Side (PHP / JSP)",
+    summary: "Arquitectura de aplicaciones web, servidores web, funcionamiento del server side, lenguaje y framework backend. Desarrollo con PHP y JSP.",
+    extendedDescription: "En esta novena semana iniciamos la Unidad II enfocada en el Desarrollo Web Fullstack. Exploramos la arquitectura cliente-servidor, los protocolos HTTP/HTTPS, servidores web como Apache y Nginx, y la ejecución de código en el lado del servidor. Comparamos el desarrollo backend tradicional con PHP y Java Server Pages (JSP) para entender cómo el servidor procesa peticiones HTTP y genera respuestas dinámicas antes de enviarlas al navegador cliente.",
+    definitions: "La arquitectura backend abarca la lógica de negocio, procesamiento de datos y autenticación en el servidor. PHP (Hypertext Preprocessor) y JSP (JavaServer Pages) son tecnologías server-side que interpretan código y renderizan HTML dinámico directo en el servidor.",
+    procedure: "1. Configurar un servidor web local (Apache XAMPP / Tomcat).\n2. Crear scripts PHP y JSP para procesar parámetros de solicitudes GET y POST.\n3. Implementar el renderizado dinámico de datos del lado del servidor.\n4. Probar y desplegar el backend en el entorno del servidor web.",
+    labExercises: "Laboratorio 9: Despliegue de aplicaciones web backend PHP y JSP.",
+    labResults: "Servidor web local configurado con despliegue exitoso de scripts dynamic server-side PHP y JSP procesando solicitudes de usuarios.",
+    myReflectionWhat: "Aprendí la diferencia esencial entre la renderización en el cliente (CSR) y la renderización en el servidor (SSR), comprendiendo el flujo completo de la petición HTTP.",
+    myReflectionHow: "Lo aprendí configurando un servidor web Apache local, escribiendo plantillas en PHP y JSP, y analizando las respuestas HTTP devueltas al navegador.",
+    achievements: [
+      "Comprensión profunda de la arquitectura web cliente-servidor y procesamiento server-side.",
+      "Configuración y despliegue de servidores web Apache para aplicaciones backend.",
+      "Desarrollo y pruebas de scripts en PHP y páginas JSP para renderizado dinámico."
+    ],
+    tools: ["PHP", "JSP", "Apache Web Server", "Server-Side Architecture", "HTTP Protocol"],
+    deliverable: "Aplicaciones web backend desplegadas en PHP y JSP con procesamiento de formularios y peticiones HTTP.",
+    codeSnippet: `<?php\n// Servidor PHP: Procesamiento Server-Side\nheader('Content-Type: application/json');\n$data = [\n  "status" => "success",\n  "unidad" => "Unidad II: Fullstack",\n  "week" => 9,\n  "technology" => "PHP Server-Side"\n];\necho json_encode($data);\n?>`,
+    icon: Server,
+    color: "#ff5722",
+    image: "https://images.unsplash.com/photo-1558494949-ef010cbdcc31?auto=format&fit=crop&q=80&w=800",
+    videoId: "8JJ101D3knE",
+    myNotes: "En el inicio de la Unidad II pasamos del cliente al servidor. Puntos fundamentales:\n1. Server-Side Execution: El navegador solo recibe HTML/CSS/JS final; el servidor procesa previamente los archivos PHP o JSP.\n2. Servidores Web: Configuración de Apache para manejar peticiones de clientes de manera concurrente.\n3. Protocolo HTTP: Encabezados de solicitud/respuesta (Status codes 200, 404, 500), métodos GET y POST.",
+    myReflection: "Comprender la lógica backend me dio una perspectiva completa del ciclo de vida web. Ya no me limito a maquetar en el cliente; ahora entiendo cómo el servidor genera el contenido.",
+    resources: [
+      { name: "Documentación Oficial PHP", url: "https://www.php.net/manual/es/" },
+      { name: "Guía de JavaServer Pages (JSP)", url: "https://docs.oracle.com/javaee/6/tutorial/doc/bnbjn.html" },
+      { name: "Repositorio GitHub del Curso", url: "https://github.com/Adat13" }
+    ]
+  },
+  {
+    number: 10,
+    unit: "Unidad II",
+    unitTitle: "Unidad II: Desarrollo Web Fullstack",
+    unitCapacity: "Desarrollar aplicaciones web frontend y backend con consumo de APIs del lado servidor y basado en estándares internacionales.",
+    title: "Semana 10: Lenguaje Python",
+    period: "Programación Backend en Python (POO & Módulos)",
+    summary: "Introducción a Python, sintaxis básica, estructuras de datos (listas, tuplas, diccionarios), funciones, POO (encapsulamiento, herencia múltiple, polimorfismo), excepciones y módulos.",
+    extendedDescription: "En la semana 10 profundizamos en el lenguaje Python como pilar moderno para el desarrollo backend y consumo de APIs. Exploramos su sintaxis limpia e indentación obligatoria, el manejo de estructuras de datos nativas (listas, tuplas, diccionarios), programación funcional e imperativa, e implementamos Programación Orientada a Objetos (POO) avanzada con clases, herencia múltiple, polimorfismo, manejo de excepciones y creación de módulos reutilizables.",
+    definitions: "Python es un lenguaje interpretado, multiparadigma de alto nivel. La POO en Python permite abstraer entidades reales mediante clases, atributos e instancias, implementando herencia múltiple y polimorfismo dinámico.",
+    procedure: "1. Instalar entorno Python 3.x y configurar entorno virtual (venv).\n2. Escribir scripts imperativos con listas, diccionarios y funciones avanzadas.\n3. Diseñar clases POO con constructores (__init__), métodos especiales y herencia múltiple.\n4. Implementar manejo de excepciones (try/except) y modularizar código en paquetes.",
+    labExercises: "Laboratorio 10: Desarrollo de Aplicación con Python orientada a objetos.",
+    labResults: "Aplicación estructurada modular en Python con soporte de POO, manejo de excepciones personalizadas y reutilización de código mediante módulos.",
+    myReflectionWhat: "Aprendí la elegancia y potencia de Python para escribir código limpio, expresivo y con patrones de diseño Orientados a Objetos avanzados.",
+    myReflectionHow: "Lo aprendí desarrollando scripts prácticos, definiendo jerarquías de clases con herencia múltiple y capturando excepciones en escenarios de prueba.",
+    achievements: [
+      "Dominio de sintaxis de Python, tipos de datos mutables e inmutables y estructuras de control.",
+      "Implementación de Programación Orientada a Objetos: clases, herencia múltiple y polimorfismo.",
+      "Manejo estructurado de excepciones, módulos y paquetes de código backend."
+    ],
+    tools: ["Python 3", "POO", "Virtualenv", "Módulos Python", "Control de Excepciones"],
+    deliverable: "Aplicación en Python modularizada con clases POO, manejo de excepciones y estructura de paquetes.",
+    codeSnippet: `class BackendService:\n    def __init__(self, name: str):\n        self.name = name\n    \n    def process_request(self) -> dict:\n        try:\n            return {"status": 200, "service": self.name}\n        except Exception as e:\n            return {"status": 500, "error": str(e)}`,
+    icon: Code2,
+    color: "#3776ab",
+    image: "https://images.unsplash.com/photo-1526379095098-d400fd0bf935?auto=format&fit=crop&q=80&w=800",
+    videoId: "rfscVS0vtbw",
+    myNotes: "Python es increíblemente limpio y expresivo. Apuntes principales:\n1. Estructuras de datos: Listas [], Tuplas () inmutables, Diccionarios {} clave-valor.\n2. POO Avanzada: Métodos __init__, __str__, herencia directa y múltiple super(), y polimorfismo.\n3. Gestión de Errores: Bloques try-except-finally para construir sistemas backend resilientes.",
+    myReflection: "Python me demostró que se puede escribir lógica compleja con muy pocas líneas de código pero alta legibilidad. Es una herramienta poderosa para cualquier desarrollador backend.",
+    resources: [
+      { name: "Documentación Oficial Python", url: "https://docs.python.org/es/3/" },
+      { name: "Python Real Python Tutorials", url: "https://realpython.com/" },
+      { name: "Proyecto Semanal / Repo", url: "https://github.com/Adat13" }
+    ]
+  },
+  {
+    number: 11,
+    unit: "Unidad II",
+    unitTitle: "Unidad II: Desarrollo Web Fullstack",
+    unitCapacity: "Desarrollar aplicaciones web frontend y backend con consumo de APIs del lado servidor y basado en estándares internacionales.",
+    title: "Semana 11: Introducción a Django",
+    period: "Framework Web Backend & Arquitectura MTV / MVC",
+    summary: "Patrones de arquitectura MVC y MTV en Django. Gestión de proyectos y URLs. Vistas basadas en funciones y en clases, plantillas y motor de modelos de base de datos.",
+    extendedDescription: "Nos adentramos en Django, el framework web de alto nivel en Python. Comprendimos el patrón de arquitectura MTV (Model-Template-View) derivado del clásico MVC. Aprendimos a crear y gestionar proyectos de Django desde la línea de comandos, configurar enrutamiento de URLs, crear vistas basadas en funciones (FBV) y basadas en clases (CBV), utilizar el motor de plantillas con herencia y bloques, y definir el modelo de datos mediante el ORM de Django con sus tipos de campos y consultas (QuerySets).",
+    definitions: "Django es un framework web fullstack en Python con filosofía 'batteries-included'. Utiliza la arquitectura MTV: Model (Capa de datos/ORM), Template (Capa de presentación HTML/JTL), y View (Lógica de control y respuesta HTTP).",
+    procedure: "1. Crear proyecto Django con django-admin startproject y app con python manage.py startapp.\n2. Configurar URLs del proyecto y la aplicación (urls.py).\n3. Crear Vistas basadas en funciones (FBV) y clases (CBV) en views.py.\n4. Construir plantillas extendibles con herencia ({% extends %}) y bloques.\n5. Definir modelos de datos en models.py y ejecutar migraciones (makemigrations, migrate).",
+    labExercises: "Laboratorio 11: Desarrollo de vistas, plantillas y modelos de datos con Django.",
+    labResults: "Proyecto Django funcional con ORM de base de datos, migraciones ejecutadas, vistas configuradas y plantillas dinámicas con herencia HTML.",
+    myReflectionWhat: "Aprendí a estructurar aplicaciones web completas aprovechando el ORM de Django y la potencia de la arquitectura MTV para desacoplar datos, vistas y plantillas.",
+    myReflectionHow: "Lo aprendí ejecutando la CLI de Django, definiendo modelos con campos específicos (CharField, IntegerField, DateTimeField) y testeando la API de consultas de Django (QuerySet).",
+    achievements: [
+      "Dominio del patrón de arquitectura MTV (Model-Template-View) en Django.",
+      "Creación y gestión de proyectos Django, configuraciones de URLs, FBV y CBV.",
+      "Modelado de bases de datos mediante Django ORM, migraciones y ejecución de consultas QuerySet."
+    ],
+    tools: ["Django", "Python", "MTV Architecture", "Django ORM", "Template Engine"],
+    deliverable: "Sistema web en Django con modelos ORM, migraciones aplicadas, vistas enrutadas y plantillas interactivas.",
+    codeSnippet: `# Django models.py & views.py\nfrom django.db import models\nfrom django.shortcuts import render\n\nclass Project(models.Model):\n    title = models.CharField(max_length=200)\n    created_at = models.DateTimeField(auto_now_add=True)\n\ndef index(request):\n    projects = Project.objects.all()\n    return render(request, 'index.html', {'projects': projects})`,
+    icon: Globe,
+    color: "#092e20",
+    image: "https://images.unsplash.com/photo-1555066931-4365d14bab8c?auto=format&fit=crop&q=80&w=800",
+    videoId: "F5mRW0jo-U4",
+    myNotes: "Django acelera radicalmente el desarrollo backend. Mis apuntes de la arquitectura MTV:\n1. Patrón MTV: Model (datos), Template (interfaz), View (controlador/lógica).\n2. ORM de Django: No escribimos SQL directamente; definimos clases Python y Django genera las migraciones y las tablas en la BD.\n3. Motor de Plantillas: Tags como {% extends %}, {% block %}, {% for %}, e integración de filtros para la capa visual.",
+    myReflection: "Django demuestra el valor de un framework robusto 'batteries-included'. Integrar modelos, vistas y plantillas de manera limpia acelera enormemente el desarrollo fullstack.",
+    resources: [
+      { name: "Documentación Oficial Django", url: "https://docs.djangoproject.com/es/5.0/" },
+      { name: "Django Girls Tutorial", url: "https://tutorial.djangogirls.org/es/" },
+      { name: "Proyecto Django / Repo", url: "https://github.com/Adat13" }
+    ]
+  },
+  {
+    number: 12,
+    unit: "Unidad II",
+    unitTitle: "Unidad II: Desarrollo Web Fullstack",
+    unitCapacity: "Desarrollar aplicaciones web frontend y backend con consumo de APIs del lado servidor y basado en estándares internacionales.",
+    title: "Semana 12: Gestión de formularios y validaciones",
+    period: "Formularios en Django, Validación & Procesamiento",
+    summary: "Creación y gestión de formularios en Django. Plantillas de formularios, validación de datos del lado servidor, tratamiento de errores y seguridad (CSRF).",
+    extendedDescription: "En la semana 12 dominamos la creación y gestión de formularios interactivos y seguros en Django. Aprendimos a construir formularios vinculados a modelos (ModelForm) e independientes (Form), renderizarlos en plantillas con estilos personalizados, aplicar validaciones automáticas y personalizadas del lado del servidor, procesar solicitudes POST y proteger las peticiones contra ataques CSRF (Cross-Site Request Forgery).",
+    definitions: "Los formularios de Django abstraen la generación de marcado HTML, la limpieza de datos recibidos y la validación estricta de tipos. El token CSRF previene peticiones malintencionadas de sitios de terceros.",
+    procedure: "1. Definir clases de formulario heredando de forms.Form o forms.ModelForm.\n2. Renderizar el formulario en la plantilla utilizando el token {% csrf_token %}.\n3. Procesar el envío POST en la vista verificando form.is_valid().\n4. Guardar datos validados con form.save() o retornar mensajes de error específicos.",
+    labExercises: "Laboratorio 12: Creación, validación y procesamiento de formularios interactivos seguros en Django.",
+    labResults: "Formulario de captura de datos completamente funcional con validación automática, protección CSRF y almacenamiento seguro en la base de datos.",
+    myReflectionWhat: "Aprendí a implementar flujos de entrada de usuario seguros con validación completa del lado servidor en Django, evitando vulnerabilidades y garantizando la integridad de la base de datos.",
+    myReflectionHow: "Lo aprendí implementando campos de validación personalizados (clean_<field>), verificando token CSRF y testeando respuestas ante datos inválidos.",
+    achievements: [
+      "Creación de formularios seguros en Django (forms.Form y ModelForm).",
+      "Implementación de reglas de validación personalizadas y manejo seguro del token CSRF.",
+      "Procesamiento de peticiones POST y retroalimentación interactiva de errores al usuario."
+    ],
+    tools: ["Django Forms", "ModelForm", "CSRF Protection", "Server-Side Validation", "HTML5 Forms"],
+    deliverable: "Módulo de formularios en Django con validación estricta, protección contra ataques CSRF y renderizado dinámico.",
+    codeSnippet: `from django import forms\nfrom .models import Project\n\nclass ProjectForm(forms.ModelForm):\n    class Meta:\n        model = Project\n        fields = ['title']\n    \n    def clean_title(self):\n        title = self.cleaned_data.get('title')\n        if len(title) < 5:\n            raise forms.ValidationError("El título debe tener al menos 5 caracteres.")\n        return title`,
+    icon: CheckCircle,
+    color: "#44b78b",
+    image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&q=80&w=800",
+    videoId: "F5mRW0jo-U4",
+    myNotes: "La gestión de formularios es crucial para cualquier aplicación web real. Puntos clave:\n1. ModelForm: Generación automática de inputs a partir de la definición del modelo en la base de datos.\n2. Token CSRF: Inclusión indispensable de {% csrf_token %} dentro de cada formulario POST.\n3. Métodos clean(): Lógica de validación personalizada para asegurar datos limpios antes del guardado.",
+    myReflection: "La validación del lado del servidor es indispensable. Nunca debemos confiar en los datos enviados desde el navegador, y Django hace que asegurarlos sea sumamente limpio y libre de errores.",
+    resources: [
+      { name: "Django Forms Documentation", url: "https://docs.djangoproject.com/en/5.0/topics/forms/" },
+      { name: "Django ModelForms Guide", url: "https://docs.djangoproject.com/en/5.0/topics/forms/modelforms/" },
+      { name: "Proyecto Django / Repo", url: "https://github.com/Adat13" }
+    ]
   }
 ];
 
 const teamMember = {
   name: "David Angel Toribio Anselmo",
   role: "Desarrollador Full Stack & UI/UX",
-  bio: "Estudiante de Ingeniería de Sistemas apasionado por el desarrollo de software y la arquitectura web. Me especializo en crear interfaces web hermosas, dinámicas y altamente interactivas usando herramientas modernas como React, CSS avanzado, Framer Motion y gráficos web en 3D.",
+  bio: "Estudiante de Ingeniería de Sistemas apasionado por el desarrollo de software y la arquitectura web fullstack. Me especializo en crear aplicaciones web modernas, dinámicas y backend con consumo de APIs del lado servidor usando herramientas como Python, Django, React, Framer Motion y gráficos en 3D.",
   education: [
     { degree: "Estudiante de Ingeniería de Sistemas", institution: "Universidad Nacional del Centro del Perú (UNCP)", period: "2022 - Presente" },
-    { degree: "Desarrollo Frontend Moderno & Web 3D", institution: "Especialización Autónoma / Cursos en línea", period: "2024 - 2026" }
+    { degree: "Desarrollo Full Stack & Web 3D", institution: "Especialización Autónoma / Cursos en línea", period: "2024 - 2026" }
   ],
   experience: [
-    { position: "Desarrollador Frontend Freelance", company: "Proyectos Independientes", period: "2025 - Presente", desc: "Diseño y desarrollo de sitios web corporativos utilizando React, Vite, Framer Motion y Three.js." },
-    { position: "Desarrollador de Aplicaciones de Laboratorio", company: "Cátedra de Desarrollo Web UNCP", period: "2025", desc: "Implementación de dashboards, maquetaciones adaptativas Mobile-First, y simulaciones 3D interactivas." }
+    { position: "Desarrollador Full Stack Freelance", company: "Proyectos Independientes", period: "2025 - Presente", desc: "Diseño y desarrollo de sitios web corporativos y backend con Python, Django, React, Vite y Three.js." },
+    { position: "Desarrollador de Aplicaciones de Laboratorio", company: "Cátedra de Desarrollo Web UNCP", period: "2025", desc: "Implementación de dashboards, maquetaciones adaptativas Mobile-First, APIs backend y simulaciones 3D interactivas." }
   ],
   stats: [
-    { label: "Proyectos Completados", value: "12+", icon: CheckCircle },
-    { label: "Implementaciones", value: "10+", icon: Wrench },
+    { label: "Proyectos Completados", value: "16+", icon: CheckCircle },
+    { label: "Implementaciones", value: "14+", icon: Wrench },
     { label: "Innovación", value: "100%", icon: Sparkles },
-    { label: "Clientes Estratégicos", value: "7+", icon: User }
+    { label: "Clientes Estratégicos", value: "9+", icon: User }
   ],
   skills: [
     { name: "React / JavaScript (ES6+)", level: 92 },
+    { name: "Python / Framework Django (MTV & ORM)", level: 90 },
     { name: "HTML5 / CSS3 (Flexbox & Grid)", level: 95 },
+    { name: "Desarrollo Web Backend (PHP / JSP / APIs)", level: 85 },
     { name: "Animaciones (Framer Motion)", level: 88 },
     { name: "Gráficos Web (Three.js / React Three Fiber)", level: 85 },
     { name: "Control de versiones (Git & GitHub)", level: 90 },
@@ -368,6 +511,34 @@ const projectsConcluidos = [
     link: "https://github.com/Adat13/adat-marc-landing",
     deploy: "https://adat-marc.com/",
     category: "Semana 8"
+  },
+  {
+    title: "Despliegue Backend PHP & JSP",
+    description: "Configuración de servidor web Apache y procesamiento dinámico del lado servidor con scripts PHP y Java Server Pages.",
+    tools: ["PHP", "JSP", "Apache", "Server-Side"],
+    link: "https://github.com/Adat13",
+    category: "Semana 9"
+  },
+  {
+    title: "Aplicación POO Python",
+    description: "Desarrollo de aplicación modular en Python 3 con Programación Orientada a Objetos, herencia múltiple, polimorfismo y manejo de excepciones.",
+    tools: ["Python 3", "POO", "Virtualenv", "Módulos"],
+    link: "https://github.com/Adat13",
+    category: "Semana 10"
+  },
+  {
+    title: "Portal Web Django MTV",
+    description: "Arquitectura web con Django framework utilizando el patrón MTV (Model-Template-View), vistas CBV/FBV y Django ORM para bases de datos.",
+    tools: ["Django", "Python", "MTV Pattern", "Django ORM"],
+    link: "https://github.com/Adat13",
+    category: "Semana 11"
+  },
+  {
+    title: "Formularios Seguros Django",
+    description: "Creación y validación de formularios server-side en Django con ModelForm, filtros de saneamiento y protección contra vulnerabilidades CSRF.",
+    tools: ["Django Forms", "ModelForm", "CSRF", "Validation"],
+    link: "https://github.com/Adat13",
+    category: "Semana 12"
   }
 ];
 
@@ -401,6 +572,7 @@ const TeamPortfolio = () => {
   const [selectedWeek, setSelectedWeek] = useState(null);
   const [is3DMode, setIs3DMode] = useState(false);
   const [active3DWeek, setActive3DWeek] = useState(null);
+  const [selectedUnit, setSelectedUnit] = useState('ALL');
 
   const handleSelectWeek = (week) => {
     setSelectedWeek(week);
@@ -862,7 +1034,7 @@ const TeamPortfolio = () => {
           </p>
 
           {/* Toggle View Mode Buttons */}
-          <div style={{ display: 'inline-flex', gap: '0.5rem', background: '#0e111a', border: '1px solid var(--glass-border)', padding: '0.4rem', borderRadius: '12px', zIndex: 10 }}>
+          <div style={{ display: 'inline-flex', gap: '0.5rem', background: '#0e111a', border: '1px solid var(--glass-border)', padding: '0.4rem', borderRadius: '12px', zIndex: 10, marginBottom: '1.5rem' }}>
             <button 
               className={`btn ${!is3DMode ? 'btn-primary' : ''}`} 
               onClick={() => { setIs3DMode(false); setSelectedWeek(null); }}
@@ -878,6 +1050,78 @@ const TeamPortfolio = () => {
               Portafolio Interactivo 3D
             </button>
           </div>
+
+          {/* Unit Filter Tabs */}
+          <div style={{ display: 'flex', justifyContent: 'center', gap: '0.6rem', flexWrap: 'wrap', marginBottom: '1.5rem' }}>
+            <button 
+              onClick={() => setSelectedUnit('ALL')}
+              style={{
+                padding: '0.5.rem 1.2rem', borderRadius: '10px', fontSize: '0.82rem', fontWeight: 700, cursor: 'pointer',
+                background: selectedUnit === 'ALL' ? 'var(--primary)' : 'rgba(255,255,255,0.04)',
+                color: selectedUnit === 'ALL' ? '#0a0d14' : '#8a9ab0',
+                border: selectedUnit === 'ALL' ? '1px solid var(--primary)' : '1px solid var(--glass-border)',
+                transition: 'all 0.2s'
+              }}
+            >
+              Todas las Semanas (1 - 12)
+            </button>
+            <button 
+              onClick={() => setSelectedUnit('Unidad I')}
+              style={{
+                padding: '0.5rem 1.2rem', borderRadius: '10px', fontSize: '0.82rem', fontWeight: 700, cursor: 'pointer',
+                background: selectedUnit === 'Unidad I' ? '#00f5ff' : 'rgba(255,255,255,0.04)',
+                color: selectedUnit === 'Unidad I' ? '#0a0d14' : '#8a9ab0',
+                border: selectedUnit === 'Unidad I' ? '1px solid #00f5ff' : '1px solid var(--glass-border)',
+                transition: 'all 0.2s'
+              }}
+            >
+              Unidad I: Frontend (Sem 1-8)
+            </button>
+            <button 
+              onClick={() => setSelectedUnit('Unidad II')}
+              style={{
+                padding: '0.5rem 1.2rem', borderRadius: '10px', fontSize: '0.82rem', fontWeight: 700, cursor: 'pointer',
+                background: selectedUnit === 'Unidad II' ? '#ff5722' : 'rgba(255,255,255,0.04)',
+                color: selectedUnit === 'Unidad II' ? '#fff' : '#8a9ab0',
+                border: selectedUnit === 'Unidad II' ? '1px solid #ff5722' : '1px solid var(--glass-border)',
+                transition: 'all 0.2s'
+              }}
+            >
+              Unidad II: Fullstack (Sem 9-12)
+            </button>
+          </div>
+
+          {/* Unit Capacity Banner */}
+          <AnimatePresence mode="wait">
+            {selectedUnit !== 'ALL' && (
+              <motion.div 
+                key={selectedUnit}
+                initial={{ opacity: 0, y: -10 }}
+                animate={{ opacity: 1, y: 0 }}
+                exit={{ opacity: 0, y: -10 }}
+                style={{ 
+                  background: selectedUnit === 'Unidad II' ? 'rgba(255, 87, 34, 0.08)' : 'rgba(0, 245, 255, 0.08)',
+                  border: `1px solid ${selectedUnit === 'Unidad II' ? '#ff5722' : '#00f5ff'}55`,
+                  borderRadius: '16px', padding: '1.2rem 1.8rem', textAlign: 'left',
+                  maxWidth: '900px', margin: '0 auto 2rem'
+                }}
+              >
+                <div style={{ display: 'flex', alignItems: 'center', gap: '0.6rem', marginBottom: '0.4rem' }}>
+                  <span className="badge" style={{ backgroundColor: selectedUnit === 'Unidad II' ? '#ff5722' : '#00f5ff', color: selectedUnit === 'Unidad II' ? '#fff' : '#000', fontWeight: 800, margin: 0 }}>
+                    {selectedUnit === 'Unidad II' ? 'UNIDAD II' : 'UNIDAD I'}
+                  </span>
+                  <h4 style={{ color: selectedUnit === 'Unidad II' ? '#ff5722' : '#00f5ff', margin: 0, fontSize: '1.1rem', fontWeight: 700 }}>
+                    {selectedUnit === 'Unidad II' ? 'Desarrollo web fullstack' : 'Desarrollo web frontend'}
+                  </h4>
+                </div>
+                <p style={{ margin: 0, color: '#e0e0e0', fontSize: '0.9rem', lineHeight: '1.6' }}>
+                  <strong>Capacidad:</strong> {selectedUnit === 'Unidad II' 
+                    ? 'Desarrollar aplicaciones web frontend y backend con consumo de APIs del lado servidor y basado en estándares internacionales.'
+                    : 'Desarrollar aplicaciones web frontend interactivas, responsivas y 3D utilizando estándares modernos HTML5, CSS3, JavaScript, React y WebGL.'}
+                </p>
+              </motion.div>
+            )}
+          </AnimatePresence>
         </div>
 
         {is3DMode ? (
@@ -889,7 +1133,7 @@ const TeamPortfolio = () => {
             style={{ display: 'flex', flexDirection: 'column', gap: '3rem' }}
           >
             <Portfolio3D 
-              weeks={weeksData} 
+              weeks={weeksData.filter(w => selectedUnit === 'ALL' || (w.unit || "Unidad I") === selectedUnit)} 
               activeWeek={active3DWeek} 
               onActiveWeekChange={setActive3DWeek} 
             />
@@ -939,7 +1183,7 @@ const TeamPortfolio = () => {
                 exit={{ opacity: 0, y: -20 }}
                 transition={{ duration: 0.3 }}
               >
-                {weeksData.map((week) => {
+                {weeksData.filter(w => selectedUnit === 'ALL' || (w.unit || "Unidad I") === selectedUnit).map((week) => {
                   const IconComponent = week.icon;
                   return (
                     <motion.div 
@@ -958,8 +1202,13 @@ const TeamPortfolio = () => {
                       
                       <div style={{ padding: '1.5rem' }}>
                         <div className="week-card-header">
-                          <div className="week-badge" style={{ backgroundColor: `${week.color}15`, color: week.color, border: `1px solid ${week.color}33` }}>
-                            Semana {week.number}
+                          <div style={{ display: 'flex', gap: '0.4rem', alignItems: 'center' }}>
+                            <div className="week-badge" style={{ backgroundColor: `${week.color}15`, color: week.color, border: `1px solid ${week.color}33` }}>
+                              Semana {week.number}
+                            </div>
+                            <span style={{ fontSize: '0.65rem', padding: '0.15rem 0.4rem', borderRadius: '4px', background: week.unit === 'Unidad II' ? 'rgba(255, 87, 34, 0.15)' : 'rgba(0, 245, 255, 0.15)', color: week.unit === 'Unidad II' ? '#ff7043' : '#00f5ff', border: `1px solid ${week.unit === 'Unidad II' ? '#ff5722' : '#00f5ff'}33`, fontWeight: 700 }}>
+                              {week.unit || "Unidad I"}
+                            </span>
                           </div>
                           <IconComponent size={24} style={{ color: week.color }} />
                         </div>
@@ -1108,6 +1357,18 @@ const TeamPortfolio = () => {
                 <p style={{ color: '#fff', fontSize: '0.9rem', fontWeight: 600, margin: '0 0 0.2rem' }}>React Documentation</p>
                 <a href="https://react.dev" target="_blank" rel="noopener noreferrer" style={{ color: 'var(--primary)', fontSize: '0.8rem', textDecoration: 'none', display: 'flex', alignItems: 'center', gap: '0.3rem' }}>
                   https://react.dev <ExternalLink size={12} />
+                </a>
+              </li>
+              <li style={{ borderBottom: '1px solid rgba(255,255,255,0.05)', paddingBottom: '0.8rem' }}>
+                <p style={{ color: '#fff', fontSize: '0.9rem', fontWeight: 600, margin: '0 0 0.2rem' }}>Python 3.x Documentation</p>
+                <a href="https://docs.python.org/es/3/" target="_blank" rel="noopener noreferrer" style={{ color: 'var(--primary)', fontSize: '0.8rem', textDecoration: 'none', display: 'flex', alignItems: 'center', gap: '0.3rem' }}>
+                  https://docs.python.org/es/3/ <ExternalLink size={12} />
+                </a>
+              </li>
+              <li style={{ borderBottom: '1px solid rgba(255,255,255,0.05)', paddingBottom: '0.8rem' }}>
+                <p style={{ color: '#fff', fontSize: '0.9rem', fontWeight: 600, margin: '0 0 0.2rem' }}>Django Web Framework Docs</p>
+                <a href="https://docs.djangoproject.com/es/5.0/" target="_blank" rel="noopener noreferrer" style={{ color: 'var(--primary)', fontSize: '0.8rem', textDecoration: 'none', display: 'flex', alignItems: 'center', gap: '0.3rem' }}>
+                  https://docs.djangoproject.com/es/5.0/ <ExternalLink size={12} />
                 </a>
               </li>
               <li>

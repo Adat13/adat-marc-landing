@@ -33,12 +33,18 @@ const roadCurve = new THREE.CatmullRomCurve3(PATH_WAYPOINTS, false, 'catmullrom'
 const ROAD_POINTS = roadCurve.getPoints(300);
 const ROAD_WIDTH = 4.8;
 
-// Station positions along the curve (parametric t values)
-const STATION_T_VALUES = [0.0, 0.08, 0.17, 0.27, 0.38, 0.50, 0.62, 0.76, 0.92];
-const PLATFORM_POSITIONS = STATION_T_VALUES.map(t => {
-  const p = roadCurve.getPoint(t);
-  return { x: p.x, z: p.z, t };
-});
+// Generate station positions along the curve based on week count
+const getPlatformPositions = (count = 12) => {
+  const step = 0.95 / Math.max(count, 1);
+  const values = [0.0];
+  for (let i = 1; i <= count; i++) {
+    values.push(Number((i * step).toFixed(3)));
+  }
+  return values.map(t => {
+    const p = roadCurve.getPoint(Math.min(0.99, t));
+    return { x: p.x, z: p.z, t };
+  });
+};
 
 // Check if a point is too close to the road
 const isNearRoad = (x, z, minDist) => {
@@ -676,11 +682,13 @@ const Portfolio3D = ({ weeks, activeWeek, onActiveWeekChange }) => {
   const [carState, setCarState] = useState({ pos: { x: 0, z: 0 }, speed: 0, braking: false });
   const [trees] = useState(() => { const t = generateTrees(); TREE_DATA = t; return t; });
 
+  const platformPositions = useMemo(() => getPlatformPositions(weeks?.length || 12), [weeks?.length]);
+
   const handleZone = (x, z) => {
     let zone = null;
-    for (let i = 1; i < PLATFORM_POSITIONS.length; i++) {
-      const p = PLATFORM_POSITIONS[i];
-      if (Math.hypot(x - p.x, z - p.z) < 2.0) { zone = i; break; }
+    for (let i = 1; i < platformPositions.length; i++) {
+      const p = platformPositions[i];
+      if (p && Math.hypot(x - p.x, z - p.z) < 2.2) { zone = i; break; }
     }
     if (zone !== activeWeek) onActiveWeekChange(zone);
   };
@@ -726,15 +734,17 @@ const Portfolio3D = ({ weeks, activeWeek, onActiveWeekChange }) => {
         <CurvedRoad />
 
         {/* Starting area */}
-        <group position={[PLATFORM_POSITIONS[0].x, 0, PLATFORM_POSITIONS[0].z]}>
-          <mesh receiveShadow position={[0, 0.03, 0]}>
-            <cylinderGeometry args={[2.5, 2.6, 0.08, 24]} />
-            <meshStandardMaterial color="#556070" roughness={0.65} />
-          </mesh>
-          <Html position={[0, 2.2, 0]} center distanceFactor={22}>
-            <div className="threed-week-label" style={{ borderColor: '#00f5ff', fontWeight: 800 }}>INICIO</div>
-          </Html>
-        </group>
+        {platformPositions[0] && (
+          <group position={[platformPositions[0].x, 0, platformPositions[0].z]}>
+            <mesh receiveShadow position={[0, 0.03, 0]}>
+              <cylinderGeometry args={[2.5, 2.6, 0.08, 24]} />
+              <meshStandardMaterial color="#556070" roughness={0.65} />
+            </mesh>
+            <Html position={[0, 2.2, 0]} center distanceFactor={22}>
+              <div className="threed-week-label" style={{ borderColor: '#00f5ff', fontWeight: 800 }}>INICIO</div>
+            </Html>
+          </group>
+        )}
 
         {/* Neon Arches along the path */}
         <NeonArches tPos={0.22} count={4} />
@@ -743,7 +753,9 @@ const Portfolio3D = ({ weeks, activeWeek, onActiveWeekChange }) => {
 
         {/* Week stations */}
         {weeks.map((w, i) => (
-          <WeekStation key={w.number} weekNum={w.number} position={PLATFORM_POSITIONS[i+1]} color={w.color} isActive={activeWeek === i+1} />
+          platformPositions[i+1] ? (
+            <WeekStation key={w.number} weekNum={w.number} position={platformPositions[i+1]} color={w.color} isActive={activeWeek === i+1} />
+          ) : null
         ))}
 
         {/* Trees */}
